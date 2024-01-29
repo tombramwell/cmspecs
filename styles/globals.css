@@ -18,12 +18,6 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
@@ -31,3 +25,96 @@ body {
     text-wrap: balance;
   }
 }
+
+/* .p-highlight {
+  color: #4CB4BE;
+  border: 1px;
+  border-color: darkgray;
+  
+} */
+
+/* table, th, td {
+  border: solid 0.5px #4CB4BE !important;
+  border-collapse: collapse !important;
+}
+
+.p-accordion-header{
+  background-color: #4CB4BE;
+  padding: 10px;
+} */
+
+:root {
+      --reach-yellow: rgb(248, 189, 65);
+      --reach-blue: rgb(61, 81, 97);
+      --reach-grey: rgb(164, 188, 194);
+      --reach-grey80: #b6c9ce;
+      --reach-grey60: #c8d7da; 
+      --reach-grey40: #dbe4e7;
+      --reach-grey20: #edf2f3;
+      --reach-grey0: #f3f5f6;
+      --reach-lightblue: rgb(76, 180, 190);
+      --reach-purple: rgb(90, 5, 110);
+  }
+  
+  table, th, td {
+      border: solid 1px var(--reach-grey60);
+      border-collapse: collapse;
+      padding: 15px;
+      color: var(--reach-blue);
+  }
+  
+  th {
+      background-color: var(--reach-grey40);
+      color: var(--reach-blue);
+  }
+  
+  tr{
+      transition: background-color 0.25s ease-in-out;
+  }
+  
+  
+  tr:nth-child(even) {
+      background-color: var(--reach-grey20);
+  }
+  
+  tr:hover{
+      background-color: var(--reach-grey40);
+      transition: background-color 0.25s ease-in-out;
+  }
+  
+  .p-accordion{
+      width: calc(100vw - 80px);
+  }
+  
+  .p-accordion-tab{
+      border-radius: 10px;
+      margin-top: 20px;
+      padding: 30px;
+      background-color: var(--reach-grey20);
+      border: 1px solid var(--reach-grey40);
+      transition: background-color 0.25s ease-in-out;
+  }
+  
+  .p-accordion-tab-active{
+      background-color: white;
+      transition: background-color 0.25s ease-in-out;
+  }
+  
+  .p-accordion-header{
+    font-size: 18px;
+  }
+  
+  .p-accordion-header-text{
+      font-size: 18px;
+      font-weight: 900;
+      margin-left: 10px;
+      color: var(--reach-blue);
+  }
+  
+  .p-datatable-table{
+      margin-top: 30px;
+  }
+  
+  .pt-5 {
+      padding-top: 0rem !important;
+  }

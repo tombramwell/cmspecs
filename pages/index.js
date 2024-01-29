@@ -31,6 +31,26 @@ export default function Home() {
     "research": "Only with min. Advanced amplification",
     "bespoke": "Video upload included",
     "restricted": "Video cannot be included in Restricted Sector bookings"},
+    {"id": 5,
+    "package": "URLs",
+    "supplied": "All links to sit within final CTA paragraph",
+    "research": "All links to sit within final CTA paragraph",
+    "bespoke": "6 maximum",
+    "restricted": "10 maximum"},
+    {"id": 6,
+    "package": "Affiliate links",
+    "supplied": "N/A",
+    "bespoke": "N/A",
+    "research": "N/A",
+    "restricted": "With legal agreement"},
+    {"id": 7,
+    "package": "Live for",
+    "supplied": "No expiry",
+    "research": "No expiry",
+    "bespoke": "No expiry",
+    "restricted": "3 months"
+
+    }
 
   ]
 
@@ -51,7 +71,7 @@ export default function Home() {
       (rowData.supplied == "No") ?
       <div>
         <Tooltip target=".suppliedCopy" className="bg-[#4CB4BE]" />
-        <span className="suppliedCopy" data-pr-tooltip={callTooltip}> 
+        <span className="suppliedCopy" data-pr-tooltip={callTooltip} data-pr-position='mouse'> 
         <p>{rowData.supplied}</p>
         </span>
       </div>
@@ -59,7 +79,7 @@ export default function Home() {
       (rowData.supplied == "3") ?
       <div>
         <Tooltip target=".suppliedCopy" className="bg-[#4CB4BE]" />
-        <span className="suppliedCopy" data-pr-tooltip={imageTooltip}> 
+        <span className="suppliedCopy" data-pr-tooltip={imageTooltip} data-pr-position='mouse'> 
         <p>{rowData.supplied}</p>
         </span>
       </div> 
@@ -79,7 +99,7 @@ export default function Home() {
       (rowData.research == "No") ?
       <div>
         <Tooltip target=".researchCopy" className="bg-[#4CB4BE]" />
-        <span className="researchCopy" data-pr-tooltip={callTooltip}> 
+        <span className="researchCopy" data-pr-tooltip={callTooltip} data-pr-position='mouse'> 
         <p>{rowData.research}</p>
         </span>
       </div> 
@@ -87,7 +107,7 @@ export default function Home() {
       (rowData.research == "3") ?
       <div>
         <Tooltip target=".researchCopy" className="bg-[#4CB4BE]" />
-        <span className="researchCopy" data-pr-tooltip={imageTooltip}> 
+        <span className="researchCopy" data-pr-tooltip={imageTooltip} data-pr-position='mouse'> 
         <p>{rowData.research}</p>
         </span>
       </div> 
@@ -106,7 +126,7 @@ export default function Home() {
       (rowData.bespoke == "Yes") ?
       <div>
         <Tooltip target=".bespokeCopy" className="bg-[#4CB4BE]" />
-        <span className="bespokeCopy" data-pr-tooltip={callTooltip}> 
+        <span className="bespokeCopy" data-pr-tooltip={callTooltip} data-pr-position='mouse'> 
         <p>{rowData.bespoke}</p>
         </span>
       </div> 
@@ -114,7 +134,7 @@ export default function Home() {
       (rowData.bespoke == "6") ?
       <div>
         <Tooltip target=".bespokeCopy" className="bg-[#4CB4BE]" />
-        <span className="bespokeCopy" data-pr-tooltip={imageTooltip}> 
+        <span className="bespokeCopy" data-pr-tooltip={imageTooltip} data-pr-position='mouse'> 
         <p>{rowData.bespoke}</p>
         </span>
       </div> 
@@ -128,12 +148,13 @@ export default function Home() {
   const restrictedTemplate = (rowData) => {
     var callTooltip =  "Restricted Sector Brief must be provided"
     var imageTooltip = "Must adhere to image guidelines in Process tab below"
+    var expiryTooltip = "Extension upsells can be purchased"
    
     return (
       (rowData.restricted == "No") ?
       <div>
         <Tooltip target=".restrictedCopy" className="bg-[#4CB4BE]" />
-        <span className="restrictedCopy" data-pr-tooltip={callTooltip}> 
+        <span className="restrictedCopy" data-pr-tooltip={callTooltip} data-pr-position='mouse'> 
         <p>{rowData.restricted}</p>
         </span>
       </div> 
@@ -141,7 +162,15 @@ export default function Home() {
       (rowData.restricted == "11") ?
       <div>
         <Tooltip target=".restrictedCopy" className="bg-[#4CB4BE]" />
-        <span className="restrictedCopy" data-pr-tooltip={imageTooltip}> 
+        <span className="restrictedCopy" data-pr-tooltip={imageTooltip} data-pr-position='mouse'> 
+        <p>{rowData.restricted}</p>
+        </span>
+      </div> 
+      :
+      (rowData.restricted == "3 months") ?
+      <div>
+        <Tooltip target=".restrictedCopy" className="bg-[#4CB4BE]" />
+        <span className="restrictedCopy" data-pr-tooltip={expiryTooltip} data-pr-position='mouse'> 
         <p>{rowData.restricted}</p>
         </span>
       </div> 
@@ -158,7 +187,7 @@ export default function Home() {
     <div className="ml-10">
     <Accordion multiple activeIndex={[0]}>
       <AccordionTab header="Specification">
-            <DataTable value={data} className="pt-5" showGridlines style={{minWidth: '50rem'}}>
+            <DataTable value={data} className="pt-5 pb-5" showGridlines style={{minWidth: '50rem'}}>
                 <Column field="package" frozen header=" " body={packageTemplate}></Column>
                 <Column field="supplied" header="Supplied" body={suppliedTemplate}></Column>
                 <Column field="research" header="Research" body={researchTemplate}></Column>
