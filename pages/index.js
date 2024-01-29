@@ -8,7 +8,7 @@ import { Accordion, AccordionTab } from 'primereact/accordion';
 export default function Home() {
   const data = [
     {"id": 1,
-    "package": "Word Count",
+    "package": "Word count",
     "supplied": 450,
     "research": 450,
     "bespoke": 750,
@@ -48,10 +48,47 @@ export default function Home() {
     "supplied": "No expiry",
     "research": "No expiry",
     "bespoke": "No expiry",
-    "restricted": "3 months"
-
+    "restricted": "3 months"},
+    {"id": 8,
+    "package": "Article cost",
+    "supplied": "£400",
+    "research": "£600",
+    "bespoke": "£900",
+    "restricted": "£3,500"},
+    {"id": 9,
+    "package": "Legal cost",
+    "supplied": "N/A",
+    "research": "N/A",
+    "bespoke": "N/A",
+    "restricted": "£750"},
+    {"id": 10,
+    "package": "Studio SLA",
+    "supplied": "3 working days",
+    "research": "3 working days",
+    "bespoke": "3 working days",
+    "restricted": "5 working days"},
+    {"id": 11,
+    "package": "Legal SLA",
+    "supplied": "N/A",
+    "research": "N/A",
+    "bespoke": "N/A",
+    "restricted": "5 working days"},
+    {"id": 12,
+    "package": "Proofing",
+    "supplied": "2 days to provide amends, otherwise article is published and no further changes can be made",
+    "research": "3 days to provide amends, otherwise article is published and no further changes can be made",
+    "bespoke": "5 days in which to provide up to 2 sets of amends before publication",
+    "restricted": "2 sets of amends, no fixed time limit due to nature of content and legal complexities"
+    },
+    {
+      "id": 13,
+      "package": "Minimum start date",
+      "supplied": "5 working days",
+      "research": "6 working days",
+      "bespoke": "8 working days",
+      "restricted": "10 working days (+proofing)" 
     }
-
+    
   ]
 
   const packageTemplate = (rowData) => {
@@ -65,7 +102,7 @@ export default function Home() {
   const suppliedTemplate = (rowData) => {
     var callTooltip =  "Usable content - eg. press release - must be provided"
     var imageTooltip = "Must adhere to image guidelines in Process tab below"
-    
+       
    
     return (
       (rowData.supplied == "No") ?
@@ -196,7 +233,24 @@ export default function Home() {
             </DataTable>
       </AccordionTab>
       <AccordionTab className="pt-5" header="Process">
-
+      <div className="pt-5 pb-5">
+      <ul>
+        <li>All SLAs begin from the point Studio receives all of the necessary assets OR a confirmed time slot for a client call</li>
+        <li>If a Content Marketing ARF is uploaded and doesn't follow the specifications above or assets are missing, it <strong>will</strong> be put onto Query</li>
+        <li>It is the salesperson or CST team member's responsibility to ensure all client-supplied assets have been uploaded</li>
+        <li>No member of the Studio team should be chased prior to the SLAs listed above</li>
+        <li>Once an article is approved and has been published, no further changes can be made. From there, a Content Marketing Amends package would need to be processed to facilitate any changes</li>
+        <li>Each article published must be at least 90% unique. This means that some quotes could be included in two or more articles, but if a client wishes to "re-use" previously-published content, a CM Amends package should be booked, rather than a new article package</li>
+      </ul>
+      <u><strong>Images</strong></u>
+      <ul>
+        <li>Client logos cannot be included in content marketing artices</li>
+        <li>Images cannot contain overlaid text</li>
+        <li>Display ads and posters cannot be used as images within articles</li>
+        <li>Captions and image credits should be supplied with all images</li>
+        <li>Images should be landscape, in a 3:2 ratio and no less than 1,200px. JPEG is the preferred format, PNG cannot be used</li>
+      </ul>
+      </div>
       </AccordionTab>
       <AccordionTab className="pt-5" header="Legal Matrix">
 
