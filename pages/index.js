@@ -236,8 +236,8 @@ export default function Home() {
       <div className="pt-5 pb-5">
       <ul>
         <li>All SLAs begin from the point Studio receives all of the necessary assets OR a confirmed time slot for a client call</li>
-        <li>If a Content Marketing ARF is uploaded and doesn't follow the specifications above or assets are missing, it <strong>will</strong> be put onto Query</li>
-        <li>It is the salesperson or CST team member's responsibility to ensure all client-supplied assets have been uploaded</li>
+        <li>If a Content Marketing ARF is uploaded and doesn&apos;t follow the specifications above or assets are missing, it <strong>will</strong> be put onto Query</li>
+        <li>It is the salesperson or CST team member&apos;s responsibility to ensure all client-supplied assets have been uploaded</li>
         <li>No member of the Studio team should be chased prior to the SLAs listed above</li>
         <li>Once an article is approved and has been published, no further changes can be made. From there, a Content Marketing Amends package would need to be processed to facilitate any changes</li>
         <li>Each article published must be at least 90% unique. This means that some quotes could be included in two or more articles, but if a client wishes to "re-use" previously-published content, a CM Amends package should be booked, rather than a new article package</li>
