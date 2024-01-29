@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+}
+
+.box {
+  /* You can add more styling here */
+  margin: 10px; /* Optional: Add margin for spacing between the divs */
+}
+
+.lowered {
+    align-self: center;
+    justify-self: center;
+    margin-left: 3rem; /* This will move div2 to the bottom of the container */
+}
+
+.text {
+    font-size: 3rem;
+    color: #4CB4BE;
+}
