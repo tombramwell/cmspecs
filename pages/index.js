@@ -233,9 +233,10 @@ export default function Home() {
             </DataTable>
       </AccordionTab>
       <AccordionTab className="pt-5" header="Process">
-      <div className="pt-5 pb-5">
+      <div>
       <ul>
         <li>All SLAs begin from the point Studio receives all of the necessary assets OR a confirmed time slot for a client call</li>
+        <li>A minimum of 48hrs notice must be provided for all client calls. Video calls are available, but must be arranged with the client and a link added to the ARF before processing to Studio</li>
         <li>If a Content Marketing ARF is uploaded and doesn&#39;t follow the specifications above or assets are missing, it <strong>will</strong> be put onto Query</li>
         <li>It is the salesperson or CST team member&#39;s responsibility to ensure all client-supplied assets have been uploaded</li>
         <li>No member of the Studio team should be chased prior to the SLAs listed above</li>
