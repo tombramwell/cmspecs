@@ -3,7 +3,7 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { Tooltip } from 'primereact/tooltip';
 import { Accordion, AccordionTab } from 'primereact/accordion';
-
+import { TreeTable } from 'primereact/treetable';
 
 export default function Home() {
   const data = [
@@ -90,6 +90,29 @@ export default function Home() {
     }
     
   ]
+
+  // const matrixData = [
+  //   {"id": 0,
+  //   "category": 'Elections',
+  //   "content": 'No',
+  //   "details": 'pi pi-fw pi-inbox'
+  // }]
+
+  const matrixData = [{
+    id: '0',
+    key: '0',
+    label: 'Election',
+    data: 'Election',
+    icon: 'pi pi-fw pi-inbox',
+    children: [
+      {
+        key: '0-0',
+        label: 'National Election',
+        data: 'National Election'
+      }
+    ]
+  }
+]
 
   const packageTemplate = (rowData) => {
     return (
@@ -253,16 +276,20 @@ export default function Home() {
       </ul>
       <u><strong>COMPETITIONS</strong></u>
       <ul>
-        <li>Before any competiton booking is processed, approval must be sought via <a href="mailto:mark.burrow@reachplc.com"><u>Mark Burrow</u></a>. Include full prize details and the intended publication sites</li>
-        <li>One approved, the <a href="https://docs.google.com/document/d/1yddfKNHW5LHdaiTZL4LvHuZvIt9reTha/edit?usp=sharing&ouid=106703888925425801381&rtpof=true&sd=true"><u>Prize Provision Document</u></a> must be sent to the client and confirmation received that they agree to the terms </li>
-        <li>The <a href="https://data.reachplc.com/221644616938059"><u>Competition Request Jotform</u></a> can then be submitted and should contain all of the necessary details to facilitate the competition</li>
+        <li>Before any competiton booking is processed, approval must be sought via <a href="mailto:mark.burrow@reachplc.com"><u>Mark Burrow</u></a>. Include full prize details and the intended publication site(s)</li>
+        <li>Once approved, the <a href="https://docs.google.com/document/d/1yddfKNHW5LHdaiTZL4LvHuZvIt9reTha/edit?usp=sharing&ouid=106703888925425801381&rtpof=true&sd=true" target="_blank"><u>Prize Provision Document</u></a> must be sent to the client and confirmation received that they agree to the terms </li>
+        <li>The <a href="https://data.reachplc.com/221644616938059" target="_blank"><u>Competition Request Jotform</u></a> can then be submitted and should contain all of the necessary details to facilitate the competition</li>
         <li>If data capture is part of the package,  <a href="mailto:dave.rad@reachplc.com"><u>Dave Rad</u></a> must be contacted to discuss the necessary agreement</li>
         <li>A Content Marketing ARF should then be created and processed to Studio. It should be clear via the package option and campaign brief that the booking relates to a competition </li>
       </ul>
       </div>
       </AccordionTab>
       <AccordionTab className="pt-5" header="Legal Matrix">
-
+        <TreeTable value={matrixData} tableStyle={{ minWidth: '50rem'}}>
+          <Column field="category" header="Category" expander></Column>
+          <Column field="content" header="Is Content allowed?"></Column>
+          <Column field="details" header="Details required"></Column>
+        </TreeTable>
       </AccordionTab>
     </Accordion>
     </div>
