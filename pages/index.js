@@ -4,6 +4,7 @@ import { Column } from 'primereact/column';
 import { Tooltip } from 'primereact/tooltip';
 import { Accordion, AccordionTab } from 'primereact/accordion';
 import { TreeTable } from 'primereact/treetable';
+import { Dialog } from 'primereact/dialog';
 
 export default function Home() {
   const data = [
@@ -98,20 +99,65 @@ export default function Home() {
   //   "details": 'pi pi-fw pi-inbox'
   // }]
 
-  const matrixData = [{
+  const matrixData = [
+    {
     id: '0',
     key: '0',
     label: 'Election',
-    data: 'Election',
+    data: {
+      category: 'Elections',
+      content: 'No',
+      details: 'N/A'
+    },
     icon: 'pi pi-fw pi-inbox',
     children: [
       {
         key: '0-0',
         label: 'National Election',
-        data: 'National Election'
+        data: {
+          category: 'National Election',
+          content: 'No',
+          details: 'N/A'
+        }
+      },
+      {
+        key: '0-1',
+        label: 'Local Election',
+        data: {
+          category: 'Local Election',
+          content: 'No',
+          details: 'N/A'
+        }
       }
     ]
-  }
+  },
+  {
+  id: '1',
+  key: '1',
+  label: 'Smoking',
+  data: {
+    category: 'Smoking',
+    content: 'No',
+    details: 'N/A'
+  },
+  icon: 'pi pi-fw pi-inbox',
+  children: [{
+    key: '1-1',
+    label: 'Tobacco products',
+    data: {
+    category: 'Tobacco products',
+    content: 'No',
+    details: 'N/A'
+    },
+  },
+  { key: '1-2',
+    label: 'Vaping',
+    data: {
+    category: 'Vaping',
+    content: 'No',
+    details: 'N/A'}
+  }]
+  },
 ]
 
   const packageTemplate = (rowData) => {
@@ -240,6 +286,20 @@ export default function Home() {
       </div>
     )
   }
+
+  // const gamblingDetails = (matrixData) => {
+    
+  //   return (
+  //     <Dialog header="Header" visible={visible} style={{ width: '50vw' }} onHide={() => setVisible(false)}>
+  //   <p className="m-0">
+  //       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+  //       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  //       consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+  //       Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  //   </p>
+  //   </Dialog>
+  //   )
+  // }
 
   return (
     <>
