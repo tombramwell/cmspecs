@@ -243,13 +243,21 @@ export default function Home() {
         <li>Once an article is approved and has been published, no further changes can be made. From there, a Content Marketing Amends package would need to be processed to facilitate any changes</li>
         <li>Each article published must be at least 90% unique. This means that some quotes could be included in two or more articles, but if a client wishes to &#34;re-use&#34; previously-published content, a CM Amends package should be booked, rather than a new article package</li>
       </ul>
-      <u><strong>Images</strong></u>
+      <u><strong>IMAGES</strong></u>
       <ul>
         <li>Client logos cannot be included in content marketing artices</li>
         <li>Images cannot contain overlaid text</li>
         <li>Display ads and posters cannot be used as images within articles</li>
         <li>Captions and image credits should be supplied with all images</li>
         <li>Images should be landscape, in a 3:2 ratio and no less than 1,200px. JPEG is the preferred format, PNG cannot be used</li>
+      </ul>
+      <u><strong>COMPETITIONS</strong></u>
+      <ul>
+        <li>Before any competiton booking is processed, approval must be sought via <a href="mailto:mark.burrow@reachplc.com"><u>Mark Burrow</u></a>. Include full prize details and the intended publication sites</li>
+        <li>One approved, the <a href="https://docs.google.com/document/d/1yddfKNHW5LHdaiTZL4LvHuZvIt9reTha/edit?usp=sharing&ouid=106703888925425801381&rtpof=true&sd=true"><u>Prize Provision Document</u></a> must be sent to the client and confirmation received that they agree to the terms </li>
+        <li>The <a href="https://data.reachplc.com/221644616938059"><u>Competition Request Jotform</u></a> can then be submitted and should contain all of the necessary details to facilitate the competition</li>
+        <li>If data capture is part of the package,  <a href="mailto:dave.rad@reachplc.com"><u>Dave Rad</u></a> must be contacted to discuss the necessary agreement</li>
+        <li>A Content Marketing ARF should then be created and processed to Studio. It should be clear via the package option and campaign brief that the booking relates to a competition </li>
       </ul>
       </div>
       </AccordionTab>
