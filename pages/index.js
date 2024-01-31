@@ -4,7 +4,6 @@ import { Column } from 'primereact/column';
 import { Tooltip } from 'primereact/tooltip';
 import { Accordion, AccordionTab } from 'primereact/accordion';
 import { TreeTable } from 'primereact/treetable';
-import { Dialog } from 'primereact/dialog';
 
 export default function Home() {
   const data = [
@@ -105,7 +104,7 @@ export default function Home() {
     key: '0',
     label: 'Election',
     data: {
-      category: 'Elections',
+      category: ' Elections',
       content: 'No',
       details: 'N/A'
     },
@@ -115,7 +114,7 @@ export default function Home() {
         key: '0-0',
         label: 'National Election',
         data: {
-          category: 'National Election',
+          category: 'National election',
           content: 'No',
           details: 'N/A'
         }
@@ -124,7 +123,7 @@ export default function Home() {
         key: '0-1',
         label: 'Local Election',
         data: {
-          category: 'Local Election',
+          category: 'Local election',
           content: 'No',
           details: 'N/A'
         }
@@ -136,7 +135,7 @@ export default function Home() {
   key: '1',
   label: 'Smoking',
   data: {
-    category: 'Smoking',
+    category: ' Smoking',
     content: 'No',
     details: 'N/A'
   },
@@ -158,6 +157,175 @@ export default function Home() {
     details: 'N/A'}
   }]
   },
+  {
+    id: '2',
+    key: '2',
+    label: 'Prescription-only medicines',
+    data: {
+      category: ' Prescription-only medicines',
+      content: 'No',
+      details: 'N/A'
+    },
+    icon: 'pi pi-fw pi-inbox',
+    children: [{
+      key: '2-1',
+      label: 'Botox',
+      data: {
+      category: 'Botox',
+      content: 'No',
+      details: 'N/A'
+      },
+    },
+    { key: '2-2',
+      label: '"Skinny" jabs',
+      data: {
+      category: '"Skinny" jabs',
+      content: 'No',
+      details: 'N/A'}
+    },
+    { key: '2-3',
+    label: 'Medicinal cannabis',
+    data: {
+    category: 'Medicinal cannabis',
+    content: 'No',
+    details: 'N/A'}
+  },
+  ]
+  },
+  {
+    id: '3',
+    key: '3',
+    label: 'Adult services',
+    data: {
+      category: 'Adult services',
+      content: 'No',
+      details: 'N/A'
+    }
+  },
+  {
+    id: '4',
+    key: '4',
+    label: 'Essay-writing services',
+    data: {
+      category: 'Essay-writing services',
+      content: 'No',
+      details: 'N/A'
+    }
+  },
+  {
+    id: '5',
+    key: '5',
+    label: 'Gambling',
+    data: {
+      category: ' Gambling',
+      content: 'Yes, but with very strict guidelines',
+    },
+    icon: 'pi pi-fw pi-inbox',
+    children: [{
+      key: '5-1',
+      label: 'Bingo',
+      data: {
+      category: 'Bingo',
+      content: 'Yes',
+      details: ['* Name of the advertiser (not the agency)',<br />,
+               '* UK Gambling Commission registration number',<br />,'* Contact number of an officer of the company',<br />,'* Company address']
+      },
+    },
+    { key: '5-2',
+      label: 'Bookmakers',
+      data: {
+      category: 'Bookmakers',
+      content: 'Yes',
+      details: ['* Name of the advertiser (not the agency)',<br />,
+               '* UK Gambling Commission registration number',<br />,'* Contact number of an officer of the company',<br />,'* Company address']
+    }},
+    { key: '5-3',
+    label: 'Online casinos',
+    data: {
+    category: 'Online casinos',
+    content: 'Yes',
+    details: ['* Name of the advertiser (not the agency)',<br />,
+    '* UK Gambling Commission registration number',<br />,'* Contact number of an officer of the company',<br />,'* Company address']
+    }},
+    { key: '5-4',
+    label: 'Brick and mortar casinos',
+    data: {
+    category: 'Brick and mortar casinos',
+    content: 'Yes',
+    details: ['* Name of the advertiser (not the agency)',<br />,
+    '* UK Gambling Commission registration number',<br />,'* Contact number of an officer of the company',<br />,'* Company address']
+  }}
+  ]
+  },
+  {
+    id: '6',
+    key: '6',
+    label: 'Prizes',
+    icon: 'pi pi-fw pi-inbox',
+    data: {
+      category: ' Prizes',
+      content: 'Yes, but with very strict guidelines',
+    //   details: ['* Name of the advertiser (not the agency)',<br />,
+    // '* UK Gambling Commission registration number',<br />,'* Contact number of an officer of the company',<br />,'* Company address']
+    },
+    children: [{
+      key: '6-1',
+      label: 'Prize raffles',
+      data: {
+        category: 'Prize raffles',
+        content: 'Yes',
+        details: ['* Name of the advertiser (not the agency)',<br />,
+    '* UK Gambling Commission registration number',<br />,'* Contact number of an officer of the company',<br />,'* Company address']
+      }
+    },{
+      key: '6-2',
+      label: 'E-Gaming',
+      data: {
+        category: 'E-gaming (if prizes are involved)',
+        content: 'Yes',
+        details: ['* Name of the advertiser (not the agency)',<br />,
+        '* UK Gambling Commission registration number',<br />,'* Contact number of an officer of the company',<br />,'* Company address']
+      }
+    },
+    {
+      key: '6-3',
+      label: 'Competitions',
+      data: {
+        category: 'Big-ticket competitions',
+        content: 'Yes',
+        details: ['* Name of the advertiser (not the agency)',<br />,
+        '* UK Gambling Commission registration number',<br />,'* Contact number of an officer of the company',<br />,'* Company address']
+      }
+    }]
+  },
+  {
+    id: '7',
+    key: '7',
+    label: 'CBD',
+    icon: 'pi pi-fw pi-inbox',
+    data: {
+      category: ' CBD',
+      content: 'Yes, but with very strict guidelines',
+    },
+    children: [{
+      key: '7-1',
+      label: 'CBD - Medicine',
+      data: {
+        category: 'CBD - Medicine',
+        content: 'Yes',
+        details: ['* Name of the advertiser (not the agency)',<br />,
+        '* MHRA product licence number',<br />,'* Contact number of an officer of the company',<br />,'* Company address'] 
+      }
+    },
+      {key: '7-2',
+      label: 'CBD - Food',
+      data: {
+        category: 'CBD - Food',
+        content: 'Yes',
+        details: ['* Name of the advertiser (not the agency)',<br />,'* Contact number of an officer of the company',<br />,'* Company address',<br />,<em>The answer to the following questions must be yes:</em>,<br />,'* Does the client have a Novel Food Authorisation license?',<br />,'* Does the product contain less than 0.02% THC?',<br />,'* Can the product legally be sold within the UK?'] 
+    }
+  }]
+}
 ]
 
   const packageTemplate = (rowData) => {
@@ -287,26 +455,12 @@ export default function Home() {
     )
   }
 
-  // const gamblingDetails = (matrixData) => {
-    
-  //   return (
-  //     <Dialog header="Header" visible={visible} style={{ width: '50vw' }} onHide={() => setVisible(false)}>
-  //   <p className="m-0">
-  //       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-  //       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  //       consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-  //       Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  //   </p>
-  //   </Dialog>
-  //   )
-  // }
-
   return (
     <>
     <main className="min-h-screen pt-5">
     <div className="ml-10">
     <Accordion multiple activeIndex={[0]}>
-      <AccordionTab header="Specification">
+      <AccordionTab header="Specifications">
             <DataTable value={data} className="pt-5 pb-5" showGridlines style={{minWidth: '50rem'}}>
                 <Column field="package" frozen header=" " body={packageTemplate}></Column>
                 <Column field="supplied" header="Supplied" body={suppliedTemplate}></Column>
@@ -320,11 +474,11 @@ export default function Home() {
       <ul>
         <li>All SLAs begin from the point Studio receives all of the necessary assets OR a confirmed time slot for a client call</li>
         <li>A minimum of 48hrs notice must be provided for all client calls. Video calls are available, but must be arranged with the client and a link added to the ARF before processing to Studio</li>
-        <li>If a Content Marketing ARF is uploaded and doesn&#39;t follow the specifications above or assets are missing, it <strong>will</strong> be put onto Query</li>
+        <li>If a Content Marketing ARF is uploaded and doesn&#39;t follow the specifications above or assets are missing, it <strong>will</strong> be put onto Query. The SLA does not begin until the Query is resolved</li>
         <li>It is the salesperson or CST team member&#39;s responsibility to ensure all client-supplied assets have been uploaded</li>
         <li>No member of the Studio team should be chased prior to the SLAs listed above</li>
         <li>Once an article is approved and has been published, no further changes can be made. From there, a Content Marketing Amends package would need to be processed to facilitate any changes</li>
-        <li>Each article published must be at least 90% unique. This means that some quotes could be included in two or more articles, but if a client wishes to &#34;re-use&#34; previously-published content, a CM Amends package should be booked, rather than a new article package</li>
+        <li>Each article published must be at least 90% unique. This means that some quotes could be used across articles, but if a client wishes to &#34;re-use&#34; previously-published content, a CM Amends package should be booked, rather than a new article</li>
       </ul>
       <u><strong>IMAGES</strong></u>
       <ul>
@@ -347,7 +501,7 @@ export default function Home() {
       <AccordionTab className="pt-5" header="Legal Matrix">
         <TreeTable value={matrixData} tableStyle={{ minWidth: '50rem'}}>
           <Column field="category" header="Category" expander></Column>
-          <Column field="content" header="Is Content allowed?"></Column>
+          <Column field="content" header="Is Content Marketing allowed?"></Column>
           <Column field="details" header="Details required"></Column>
         </TreeTable>
       </AccordionTab>
