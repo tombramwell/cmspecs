@@ -717,7 +717,7 @@ export default function Home() {
       </div>
       </AccordionTab>
       <AccordionTab className="pt-5" header="Legal Matrix">
-        <div className="pt-5 pb-5"><a><br />The below is a non-exhaustive list of the industries that can only be progressed as Restricted Sector packages, if at all. The table is intended for the salesperson to determine the necessary package at the point of pitching and confirm the details that must be provided in order to progress the booking. Any booking received that does not contain the necessary information in the Details Required section will be rejected.</a></div>
+        <div className="pt-5 pb-5"><a><br />The below is a non-exhaustive list of the industries that can only be progressed as Restricted Sector packages, if at all. The table is intended for the salesperson to determine the necessary package at the point of pitching and confirm the details that must be provided in order to progress the booking. Any booking received that does not contain the necessary information in the Details Required section will be rejected. It is the responsibility of the salesperson to verify that the details provided are valid</a></div>
         <TreeTable value={matrixData} tableStyle={{ minWidth: '50rem'}}>
           <Column field="category" header="Category" expander></Column>
           <Column field="content" header="Is Content Marketing allowed?"></Column>
