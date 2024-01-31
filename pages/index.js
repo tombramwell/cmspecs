@@ -306,7 +306,7 @@ export default function Home() {
       data: {
         category: 'CBD - Medicine',
         content: 'Yes',
-        details: [<div key='7-1'>* Name of the advertiser (not the agency)<br />* MHRA product licence number<br />* Contact number of an officer of the company<br />* Company address</div>]
+        details: [<div key='7-1'>* Name of the advertiser (not the agency)<br />* MHRA product license number<br />* Contact number of an officer of the company<br />* Company address</div>]
       }
     },
       {key: '7-2',
@@ -314,9 +314,35 @@ export default function Home() {
       data: {
         category: 'CBD - Food',
         content: 'Yes',
-        details: [<div key='7-2'>* Name of the advertiser (not the agency)<br />* MHRA product licence number<br />* Contact number of an officer of the company<br />* Company address<br /><em>The answer to the following questions must be yes:</em><br />* Does the client have a Novel Food Authorisation license?<br />* Does the product contain less than 0.02% THC?<br />* Can the product legally be sold within the UK?</div>] 
+        details: [<div key='7-2'>* Name of the advertiser (not the agency)<br />* Contact number of an officer of the company<br />* Company address<br /><em>The answer to the following questions must be yes:</em><br />* Does the client have a Novel Food Authorisation license?<br />* Does the product contain less than 0.02% THC?<br />* Can the product legally be sold within the UK?</div>] 
     }
   }]
+},{
+  id: '8',
+  key: '8',
+  label: 'Medical',
+  icon: 'pi pi-fw pi-inbox',
+  data: {
+    category: ' Medical',
+    content: 'Yes, but with very strict guidelines',
+  },
+  children: [{
+    key: '8-1',
+    label: 'HRT',
+    data: {
+      category: 'HRT',
+      content: 'Yes',
+      details: [<div key='8-1'>* Name of the advertiser (not the agency)<br />* MHRA product license number<br />* Contact number of an officer of the company<br />* Company address<br /><em>The answer to the following questions must be yes:</em><br />* Can the product legally be sold within the UK?<br />* Are all claims relating to the product authorised on the Great Britain Nutrition and Health Claims (GB NHC) register?</div>] 
+    }
+  },{
+    key: '8-2',
+    label: 'Medicinal supplements',
+    data: {
+      category: 'Medicinal supplements',
+      content: 'Yes',
+      details: [<div key='8-2'>* Name of the advertiser (not the agency)<br />* MHRA product license number<br />* Contact number of an officer of the company<br />* Company address<br /><em>The answer to the following questions must be yes:</em><br />* Can the product legally be sold within the UK?<br />* Are all claims relating to the product authorised on the Great Britain Nutrition and Health Claims (GB NHC) register?</div>] 
+  }}
+]
 }
 ]
 
