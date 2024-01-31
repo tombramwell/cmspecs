@@ -718,10 +718,10 @@ export default function Home() {
       <ul>
         <li>A minimum of 7 clients must be booked onto every listicle. Listicles with fewer than 7 will no longer be accepted under any circumstances</li>
         <li>Any client that falls into a category covered by the Legal Matrix below cannot be included in a listicle</li>
-        <li>The stop in each listicle receives 150 words and 1 image. Every other slot receives 100 words and 1 image</li>
+        <li>The top spot in each listicle receives 150 words and 1 image. Every other slot receives 100 words and 1 image</li>
         <li>The premium slots will appear at the top of the listicle as sold. The remaining slots appear in the order they are created in Salesforce and cannot be altered. No client should be promised a specific slot unless one of the premium slots</li>
         <li>Only the copy provided will be used. Any missing info - call to action or contact details etc - will not be sourced by the writer</li>
-        <li>Listicles are processed to Studio when the 'Listicle booking complete' box is ticked in Salesforce. This should only be ticked when <strong><u>ALL</u></strong> content and images has been uploaded. After this point, no further bookings can be added</li>
+        <li>Listicles are processed to Studio when the &#39;Listicle booking complete&#39; box is ticked in Salesforce. This should only be ticked when <strong><u>ALL</u></strong> content and images has been uploaded. After this point, no further bookings can be added</li>
         <li>The image rules above apply - client logos/posters CANNOT be used as images. The booking will not be progressed if incorrect images are provided </li>
       </ul>
       </div>
