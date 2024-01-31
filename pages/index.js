@@ -227,8 +227,7 @@ export default function Home() {
       data: {
       category: 'Bingo',
       content: 'Yes',
-      details: ['* Name of the advertiser (not the agency)',<br />,
-               '* UK Gambling Commission registration number',<br />,'* Contact number of an officer of the company',<br />,'* Company address']
+      details: [<div key='5-1'>* Name of the advertiser (not the agency)<br />* UK Gambling Commission registration number<br />* Contact number of an officer of the company<br />* Company address</div>]
       },
     },
     { key: '5-2',
@@ -236,24 +235,21 @@ export default function Home() {
       data: {
       category: 'Bookmakers',
       content: 'Yes',
-      details: ['* Name of the advertiser (not the agency)',<br />,
-               '* UK Gambling Commission registration number',<br />,'* Contact number of an officer of the company',<br />,'* Company address']
+      details: [<div key='5-2'>* Name of the advertiser (not the agency)<br />* UK Gambling Commission registration number<br />* Contact number of an officer of the company<br />* Company address</div>]
     }},
     { key: '5-3',
     label: 'Online casinos',
     data: {
     category: 'Online casinos',
     content: 'Yes',
-    details: ['* Name of the advertiser (not the agency)',<br />,
-    '* UK Gambling Commission registration number',<br />,'* Contact number of an officer of the company',<br />,'* Company address']
+    details: [<div key='5-3'>* Name of the advertiser (not the agency)<br />* UK Gambling Commission registration number<br />* Contact number of an officer of the company<br />* Company address</div>]
     }},
     { key: '5-4',
     label: 'Brick and mortar casinos',
     data: {
     category: 'Brick and mortar casinos',
     content: 'Yes',
-    details: ['* Name of the advertiser (not the agency)',<br />,
-    '* UK Gambling Commission registration number',<br />,'* Contact number of an officer of the company',<br />,'* Company address']
+    details: [<div key='5-4'>* Name of the advertiser (not the agency)<br />* UK Gambling Commission registration number<br />* Contact number of an officer of the company<br />* Company address</div>]
   }}
   ]
   },
@@ -274,8 +270,7 @@ export default function Home() {
       data: {
         category: 'Prize raffles',
         content: 'Yes',
-        details: ['* Name of the advertiser (not the agency)',<br />,
-    '* UK Gambling Commission registration number',<br />,'* Contact number of an officer of the company',<br />,'* Company address']
+        details: [<div key='6-1'>* Name of the advertiser (not the agency)<br />* UK Gambling Commission registration number<br />* Contact number of an officer of the company<br />* Company address</div>]
       }
     },{
       key: '6-2',
@@ -283,8 +278,7 @@ export default function Home() {
       data: {
         category: 'E-gaming (if prizes are involved)',
         content: 'Yes',
-        details: ['* Name of the advertiser (not the agency)',<br />,
-        '* UK Gambling Commission registration number',<br />,'* Contact number of an officer of the company',<br />,'* Company address']
+        details: [<div key='6-2'>* Name of the advertiser (not the agency)<br />* UK Gambling Commission registration number<br />* Contact number of an officer of the company<br />* Company address</div>]
       }
     },
     {
@@ -293,8 +287,7 @@ export default function Home() {
       data: {
         category: 'Big-ticket competitions',
         content: 'Yes',
-        details: ['* Name of the advertiser (not the agency)',<br />,
-        '* UK Gambling Commission registration number',<br />,'* Contact number of an officer of the company',<br />,'* Company address']
+        details: [<div key='6-3'>* Name of the advertiser (not the agency)<br />* UK Gambling Commission registration number<br />* Contact number of an officer of the company<br />* Company address</div>]
       }
     }]
   },
@@ -313,8 +306,7 @@ export default function Home() {
       data: {
         category: 'CBD - Medicine',
         content: 'Yes',
-        details: ['* Name of the advertiser (not the agency)',<br />,
-        '* MHRA product licence number',<br />,'* Contact number of an officer of the company',<br />,'* Company address'] 
+        details: [<div key='7-1'>* Name of the advertiser (not the agency)<br />* MHRA product licence number<br />* Contact number of an officer of the company<br />* Company address</div>]
       }
     },
       {key: '7-2',
@@ -322,7 +314,7 @@ export default function Home() {
       data: {
         category: 'CBD - Food',
         content: 'Yes',
-        details: ['* Name of the advertiser (not the agency)',<br />,'* Contact number of an officer of the company',<br />,'* Company address',<br />,<em>The answer to the following questions must be yes:</em>,<br />,'* Does the client have a Novel Food Authorisation license?',<br />,'* Does the product contain less than 0.02% THC?',<br />,'* Can the product legally be sold within the UK?'] 
+        details: [<div key='7-2'>* Name of the advertiser (not the agency)<br />* MHRA product licence number<br />* Contact number of an officer of the company<br />* Company address<br /><em>The answer to the following questions must be yes:</em><br />* Does the client have a Novel Food Authorisation license?<br />* Does the product contain less than 0.02% THC?<br />* Can the product legally be sold within the UK?</div>] 
     }
   }]
 }
