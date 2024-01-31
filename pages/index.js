@@ -695,7 +695,8 @@ export default function Home() {
         <li>If a Content Marketing ARF is uploaded and doesn&#39;t follow the specifications above or assets are missing, it <strong>will</strong> be put onto Query. The SLA does not begin until the Query is resolved</li>
         <li>It is the salesperson or CST team member&#39;s responsibility to ensure all client-supplied assets have been uploaded</li>
         <li>No member of the Studio team should be chased prior to the SLAs listed above</li>
-        <li>Once an article is approved and has been published, no further changes can be made. From there, a Content Marketing Amends package would need to be processed to facilitate any changes</li>
+        <li>As a proof is produced, the article will be scheduled to go live at the conclusion of the proofing windows listed above. If amends are not received within that time, the article will be published as per the initial proof</li>
+        <li>Once an article has been published, no further changes can be made. From there, a Content Marketing Amends package would need to be processed to facilitate any changes</li>
         <li>Each article published must be at least 90% unique. This means that some quotes could be used across articles, but if a client wishes to &#34;re-use&#34; previously-published content, a CM Amends package should be booked, rather than a new article</li>
       </ul>
       <u><strong>IMAGES</strong></u>
