@@ -341,7 +341,188 @@ export default function Home() {
       category: 'Medicinal supplements',
       content: 'Yes',
       details: [<div key='8-2'>* Name of the advertiser (not the agency)<br />* MHRA product license number<br />* Contact number of an officer of the company<br />* Company address<br /><em>The answer to the following questions must be yes:</em><br />* Can the product legally be sold within the UK?<br />* Are all claims relating to the product authorised on the Great Britain Nutrition and Health Claims (GB NHC) register?</div>] 
-  }}
+  }},
+  {
+    key: '8-3',
+    label: 'Weightloss pills',
+    data: {
+      category: 'Weightloss pills',
+      content: 'Yes',
+      details: [<div key='8-3'>* Name of the advertiser (not the agency)<br />* MHRA product license number<br />* Contact number of an officer of the company<br />* Company address<br /><em>The answer to the following questions must be yes:</em><br />* Can the product legally be sold within the UK?<br />* Are all claims relating to the product authorised on the Great Britain Nutrition and Health Claims (GB NHC) register?<br /><em>NB. The advertising rules state any claim made for the effectiveness of a weight-loss or slimming method or product should be backed by rigorous practical trials conducted on people. Testimonials that are not supported by trials do not constitute adequate evidence.
+      Claims that specify a precise amount of weight-loss within a specific time period should be avoided. As should claims that state a weight-loss or slimming product can help you lose weight from a specific part of the body</em></div>] 
+    }
+  },
+  {
+    key: '8-4',
+    label: 'Cosmetic dentistry',
+    data: {
+      category: 'Cosmetic dentistry',
+      content: 'Yes',
+      details: [<div key='8-4'>* Name of the advertiser (not the agency)<br />* Contact number of an officer of the company<br />* Company address<br /></div>]
+    }
+  },
+  {
+    key: '8-5',
+    label: 'Private hospitals',
+    data: {
+      category: 'Private hospitals',
+      content: 'Yes',
+      details: [<div key='8-5'>* Name of the advertiser (not the agency)<br />* Contact number of an officer of the company<br />* Company address<br /></div>]
+    }
+  },
+  {
+    key: '8-6',
+    label: 'Surgery (including hair transplants/weight loss)',
+    data: {
+      category: 'Surgery (including hair transplants/weight loss)',
+      content: 'Yes',
+      details: [<div key='8-6'>* Name of the advertiser (not the agency)<br />* Contact number of an officer of the company<br />* Company address<br /></div>]
+    }
+  },
+  {
+    key: '8-7',
+    label: 'Clinical trials',
+    data: {
+      category: 'Clinical trials',
+      content: 'Yes',
+      details: [<div key='8-6'>* Name of the advertiser (not the agency)<br />* Contact number of an officer of the company<br />* Company address<br />* Evidence of approval for the trial from the Medicines and Healthcare Products Regulatory Agency (MHRA)</div>]
+    }
+  }
+]
+},{
+  id: '9',
+  key: '9',
+  label: 'Financial',
+  icon: 'pi pi-fw pi-inbox',
+  data: {
+    category: ' Financial',
+    content: 'Yes, but with very strict guidelines',
+  },
+  children: [{
+   key: '9-1',
+   label: 'Investment',
+   data: {
+    category: 'Investment',
+    content: 'Yes',
+    details: [<div key='9-1'>* Name of the advertiser (not the agency)<br />* Contact number of an officer of the company<br />* Company address<br />* FCA Financial Services Register reference number</div>]
+   }
+  },
+  {
+  key: '9-2',
+  label: 'Loan provider',
+  data: {
+   category: 'Loan provider',
+   content: 'Yes',
+   details: [<div key='9-2'>* Name of the advertiser (not the agency)<br />* Contact number of an officer of the company<br />* Company address<br />* FCA Financial Services Register reference number</div>]
+  }
+ },
+ {
+  key: '9-3',
+  label: 'Buy-back scheme',
+  data: {
+   category: 'Buy-back scheme',
+   content: 'Yes',
+   details: [<div key='9-3'>* Name of the advertiser (not the agency)<br />* Contact number of an officer of the company<br />* Company address<br />* FCA Financial Services Register reference number</div>]
+  }
+ },
+ {
+  key: '9-4',
+  label: 'Pawnbroker',
+  data: {
+   category: 'Pawnbroker',
+   content: 'Yes',
+   details: [<div key='9-4'>* Name of the advertiser (not the agency)<br />* Contact number of an officer of the company<br />* Company address<br />* FCA Financial Services Register reference number</div>]
+  }
+ },
+ {
+  key: '9-5',
+  label: 'Car finance',
+  data: {
+   category: 'Car finance',
+   content: 'Yes',
+   details: [<div key='9-5'>* Name of the advertiser (not the agency)<br />* Contact number of an officer of the company<br />* Company address<br />* FCA Financial Services Register reference number</div>]
+  }
+ },
+ {
+  key: '9-6',
+  label: 'Property finance',
+  data: {
+   category: 'Property finance',
+   content: 'Yes',
+   details: [<div key='9-6'>* Name of the advertiser (not the agency)<br />* Contact number of an officer of the company<br />* Company address<br />* FCA Financial Services Register reference number</div>]
+  }
+ },
+ {
+  key: '9-7',
+  label: 'Get-rich-quick scheme',
+  data: {
+   category: 'Get-rich-quick scheme',
+   content: 'Yes',
+   details: [<div key='9-7'>* Name of the advertiser (not the agency)<br />* Contact number of an officer of the company<br />* Company address<br />* FCA Financial Services Register reference number</div>]
+  }
+ },
+ {
+  key: '9-8',
+  label: 'Crypto',
+  data: {
+   category: 'Crypto',
+   content: 'Yes',
+   details: [<div key='9-8'>* Name of the advertiser (not the agency)<br />* Contact number of an officer of the company<br />* Company address<br />* If the company promotes crypto gambling, the details from the Gambling section above must also be provided</div>]
+  }
+ },
+]
+},{
+  id: '10',
+  key: '10',
+  label: 'Spiritual/Psychic services',
+  icon: 'pi pi-fw pi-inbox',
+  data: {
+    category: ' Spiritual/Psychic services',
+    content: 'Yes, but with very strict guidelines',
+  },
+  children: [{
+    key: '10-1',
+    label: 'Psychics', 
+    data: {
+      category: 'Psychics',
+      content: 'Yes',
+      details: [<div key='10-1'>* Name of the advertiser (not the agency)<br />* Contact number of an officer of the company<br />* Company address<br /><em>NB: We cannot make any claims in these features</em></div>]
+    }
+  },
+  {
+    key: '10-2',
+    label: 'Spiritualists', 
+    data: {
+      category: 'Spiritualists',
+      content: 'Yes',
+      details: [<div key='10-2'>* Name of the advertiser (not the agency)<br />* Contact number of an officer of the company<br />* Company address<br /><em>NB: We cannot make any claims in these features</em></div>]
+  }
+},
+{
+  key: '10-3',
+  label: 'Fortune tellers', 
+  data: {
+    category: 'Fortune tellers',
+    content: 'Yes',
+    details: [<div key='10-3'>* Name of the advertiser (not the agency)<br />* Contact number of an officer of the company<br />* Company address<br /><em>NB: We cannot make any claims in these features</em></div>]
+}
+}, {
+  key: '10-4',
+  label: 'Astrologers', 
+  data: {
+    category: 'Astrologers',
+    content: 'Yes',
+    details: [<div key='10-4'>* Name of the advertiser (not the agency)<br />* Contact number of an officer of the company<br />* Company address<br /><em>NB: We cannot make any claims in these features</em></div>]
+}
+}, {
+  key: '10-5',
+  label: 'Clairvoyants', 
+  data: {
+    category: 'Clairvoyants',
+    content: 'Yes',
+    details: [<div key='10-5'>* Name of the advertiser (not the agency)<br />* Contact number of an officer of the company<br />* Company address<br /><em>NB: We cannot make any claims in these features</em></div>]
+}
+}
 ]
 }
 ]
