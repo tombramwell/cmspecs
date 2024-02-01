@@ -75,9 +75,9 @@ export default function Home() {
     "restricted": "5 working days"},
     {"id": 12,
     "package": "Proofing",
-    "supplied": "2 days to provide amends, otherwise article is published and no further changes can be made",
-    "research": "3 days to provide amends, otherwise article is published and no further changes can be made",
-    "bespoke": "5 days in which to provide up to 2 sets of amends before publication",
+    "supplied": "1 set of amends to be provided within 48 hours",
+    "research": "1 set of amends to be provided within 72 hours",
+    "bespoke": "2 sets of amends to be provided within 72 hours",
     "restricted": "2 sets of amends, no fixed time limit due to nature of content and legal complexities"
     },
     {
@@ -695,9 +695,13 @@ export default function Home() {
         <li>If a Content Marketing ARF is uploaded and doesn&#39;t follow the specifications above or assets are missing, it <strong>will</strong> be put onto Query. The SLA does not begin until the Query is resolved</li>
         <li>It is the salesperson or CST team member&#39;s responsibility to ensure all client-supplied assets have been uploaded</li>
         <li>No member of the Studio team should be chased prior to the SLAs listed above</li>
-        <li>As a proof is produced, the article will be scheduled to go live at the conclusion of the proofing windows listed above. If amends are not received within that time, the article will be published as per the initial proof</li>
-        <li>Once an article has been published, no further changes can be made. From there, a Content Marketing Amends package would need to be processed to facilitate any changes</li>
         <li>Each article published must be at least 90% unique. This means that some quotes could be used across articles, but if a client wishes to &#34;re-use&#34; previously-published content, a CM Amends package should be booked, rather than a new article</li>
+      </ul>
+      <u><strong>PROOFING</strong></u>
+      <ul>
+        <li>As a proof is produced, the article will be scheduled to go live at the conclusion of the proofing windows listed above. If amends are not received within that time, the article will be published as per the initial proof</li>
+        <li>For a Supplied package, amends received within the proofing window will be made and the article published. Research and Bespoke packages will receive a further proof and the client will have 48 hrs to approve or the article will be published automatically</li>
+        <li>Once an article has been published, no further changes can be made. From there, a Content Marketing Amends package would need to be processed to facilitate any changes</li>
       </ul>
       <u><strong>IMAGES</strong></u>
       <ul>
@@ -724,6 +728,7 @@ export default function Home() {
         <li>Only the copy provided will be used. Any missing info - call to action or contact details etc - will not be sourced by the writer</li>
         <li>Listicles are processed to Studio when the &#39;Listicle booking complete&#39; box is ticked in Salesforce. This should only be ticked when <strong><u>ALL</u></strong> content and images has been uploaded. After this point, no further bookings can be added</li>
         <li>The image rules above apply - client logos/posters CANNOT be used as images. The booking will not be progressed if incorrect images are provided </li>
+        <li>Each listicle must have one designated Listicle Owner within the commercial team. It is their responsibility to ensure that all copy and images are uploaded and usable. The proof will be supplied to the Listicle Owner and all proofing/amends must be collated and provided by that single point of contact</li>
       </ul>
       </div>
       </AccordionTab>
