@@ -73,15 +73,23 @@ export default function Home() {
     "research": "N/A",
     "bespoke": "N/A",
     "restricted": "5 working days"},
-    {"id": 12,
+    {
+      "id": 12,
+      "package": "Amends",
+      "supplied": "1 set",
+      "research": "1 set",
+      "bespoke": "2 sets",
+      "restricted": "2 sets"
+    },
+    {"id": 13,
     "package": "Proofing",
-    "supplied": "1 set of amends to be provided within 48 hours",
-    "research": "1 set of amends to be provided within 72 hours",
-    "bespoke": "2 sets of amends to be provided within 72 hours",
-    "restricted": "2 sets of amends, no fixed time limit due to nature of content and legal complexities"
+    "supplied": "2 days to provide amends, otherwise article is published and no further changes can be made",
+    "research": "3 days to provide amends, otherwise article is published and no further changes can be made",
+    "bespoke": "5 days to provide amends, otherwise article is published and no further changes can be made",
+    "restricted": "No fixed time limit due to nature of content and legal complexities"
     },
     {
-      "id": 13,
+      "id": 14,
       "package": "Minimum start date",
       "supplied": "5 working days",
       "research": "6 working days",
@@ -374,7 +382,7 @@ export default function Home() {
     key: '8-6',
     label: 'Surgery (including hair transplants/weight loss)',
     data: {
-      category: 'Surgery (including hair transplants/weight loss)',
+      category: 'Surgery (including hair transplants/weight loss/tattoo removal)',
       content: 'Yes',
       details: [<div key='8-6'>* Name of the advertiser (not the agency)<br />* Contact number of an officer of the company<br />* Company address<br /></div>]
     }
