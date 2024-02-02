@@ -77,7 +77,7 @@ export default function Home() {
       "id": 12,
       "package": "Amends",
       "supplied": "1 set",
-      "research": "1 set",
+      "research": "2 sets",
       "bespoke": "2 sets",
       "restricted": "2 sets"
     },
@@ -705,10 +705,11 @@ export default function Home() {
         <li>No member of the Studio team should be chased prior to the SLAs listed above</li>
         <li>Each article published must be at least 90% unique. This means that some quotes could be used across articles, but if a client wishes to &#34;re-use&#34; previously-published content, a CM Amends package should be booked, rather than a new article</li>
       </ul>
-      <u><strong>PROOFING</strong></u>
+      <u><strong>PROOFING & AMENDS</strong></u>
       <ul>
         <li>As a proof is produced, the article will be scheduled to go live at the conclusion of the proofing windows listed above. If amends are not received within that time, the article will be published as per the initial proof</li>
-        <li>For a Supplied package, amends received within the proofing window will be made and the article published. Research and Bespoke packages will receive a further proof and the client will have 48 hrs to approve or the article will be published automatically</li>
+        <li>For a Supplied package, amends received within the proofing window will be made and the article published.</li>
+        <li>Research and Bespoke packages will receive a further proof and the client will have 48 hrs to approve or the article will be published automatically</li>
         <li>Once an article has been published, no further changes can be made. From there, a Content Marketing Amends package would need to be processed to facilitate any changes</li>
       </ul>
       <u><strong>IMAGES</strong></u>
@@ -717,7 +718,7 @@ export default function Home() {
         <li>Images cannot contain overlaid text</li>
         <li>Display ads and posters cannot be used as images within articles</li>
         <li>Captions and image credits should be supplied with all images</li>
-        <li>Images should be landscape, in a 3:2 ratio and no less than 1,200px. JPEG is the preferred format, PNG cannot be used</li>
+        <li>Images should be landscape, in a 3:2 ratio and between 800 and 2,500 pixels wide. JPEG is the preferred format, PNG cannot be used</li>
       </ul>
       <u><strong>COMPETITIONS</strong></u>
       <ul>
