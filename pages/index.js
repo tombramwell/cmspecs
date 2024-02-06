@@ -685,7 +685,7 @@ export default function Home() {
     <>
     <main className="min-h-screen pt-5">
     <div className="ml-10">
-    <Accordion multiple activeIndex={[0]}>
+    <Accordion multiple activeIndex={[0]} className="mb-7">
       <AccordionTab header="Specifications">
             <DataTable value={data} className="pt-5 pb-5" showGridlines style={{minWidth: '50rem'}}>
                 <Column field="package" frozen header=" " body={packageTemplate}></Column>
