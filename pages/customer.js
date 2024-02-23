@@ -697,6 +697,10 @@ export default function Home() {
         </AccordionTab>
         </Accordion>
       </div>
+      <div id="research">
+        <h2>Research</h2>
+        <p>A Research article will be produced by one of our team of highly-skilled writers. To produce the best possible final article, we require a content brief that explains your reason for advertising and highlights the key points you wish to be included. There should be a minimum of 5 bullet points that provide all of the information we require, plus a link to your website so that we can gather the necessary background information. Feel free to provide a line or so of copy that we can attribute to yourself - as well as your full name and job title - as a quote.</p>
+      </div>
 
     </div>
 
