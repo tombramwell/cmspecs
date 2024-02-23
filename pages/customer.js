@@ -4,21 +4,26 @@ import { Column } from 'primereact/column';
 import { Tooltip } from 'primereact/tooltip';
 import { Accordion, AccordionTab } from 'primereact/accordion';
 import { TreeTable } from 'primereact/treetable';
+import { Inplace, InplaceDisplay, InplaceContent } from 'primereact/inplace';
+import { InputText } from "primereact/inputtext";
 
 export default function Home() {
+  const [clientNameValue, setClientNameValue] = useState('')
+
+  const icon = (<i className="pi pi-search"></i>)
   const data = [
     {"id": 1,
-    "package": "Word count",
+    "package": "Maximum word count",
     "supplied": 500,
     "research": 500,
     "bespoke": 750,
     "restricted": 3000 },
     {"id": 2,
-    "package": "Interview",
-    "supplied": "No",
-    "research": "No",
-    "bespoke": "Yes",
-    "restricted": "No"},
+    "package": "Assets required",
+    "supplied": "Press release or usable content",
+    "research": "Content brief and minimum of 5 bullet points",
+    "bespoke": "Bespoke Questionnaire",
+    "restricted": "Restricted Sector Brief"},
     {"id": 3,
     "package": "Images",
     "supplied": "3",
@@ -37,43 +42,13 @@ export default function Home() {
     "research": "All links to sit within final CTA paragraph",
     "bespoke": "6 maximum",
     "restricted": "10 maximum"},
-    {"id": 6,
-    "package": "Affiliate links",
-    "supplied": "N/A",
-    "bespoke": "N/A",
-    "research": "N/A",
-    "restricted": "With legal agreement"},
     {"id": 7,
     "package": "Live for",
     "supplied": "No expiry",
     "research": "No expiry",
     "bespoke": "No expiry",
     "restricted": "3 months"},
-    {"id": 8,
-    "package": "Article cost",
-    "supplied": "£400",
-    "research": "£600",
-    "bespoke": "£900",
-    "restricted": "£3,500"},
-    {"id": 9,
-    "package": "Legal cost",
-    "supplied": "N/A",
-    "research": "N/A",
-    "bespoke": "N/A",
-    "restricted": "£750"},
-    {"id": 10,
-    "package": "Studio SLA",
-    "supplied": "3 working days",
-    "research": "3 working days",
-    "bespoke": "3 working days",
-    "restricted": "5 working days"},
-    {"id": 11,
-    "package": "Legal SLA",
-    "supplied": "N/A",
-    "research": "N/A",
-    "bespoke": "N/A",
-    "restricted": "5 working days"},
-    {
+      {
       "id": 12,
       "package": "Amends",
       "supplied": "1 set",
@@ -87,14 +62,6 @@ export default function Home() {
     "research": "3 days to provide amends, otherwise article is published and no further changes can be made",
     "bespoke": "5 days to provide amends, otherwise article is published and no further changes can be made",
     "restricted": "No fixed time limit due to nature of content and legal complexities"
-    },
-    {
-      "id": 14,
-      "package": "Minimum start date",
-      "supplied": "5 working days",
-      "research": "6 working days",
-      "bespoke": "8 working days",
-      "restricted": "10 working days (+proofing)" 
     }
     
   ]
@@ -685,8 +652,7 @@ export default function Home() {
     <>
     <main className="min-h-screen pt-5">
     <div className="ml-10">
-    <Accordion multiple activeIndex={[0]} className="mb-7">
-      <AccordionTab header="Specifications">
+        <div id="packagesTable" className="m-5">
             <DataTable value={data} className="pt-5 pb-5" showGridlines style={{minWidth: '50rem'}}>
                 <Column field="package" frozen header=" " body={packageTemplate}></Column>
                 <Column field="supplied" header="Supplied" body={suppliedTemplate}></Column>
@@ -694,63 +660,44 @@ export default function Home() {
                 <Column field="bespoke" header="Bespoke" body={bespokeTemplate}></Column>
                 <Column field="restricted" header="Restricted" body={restrictedTemplate}></Column>
             </DataTable>
-      </AccordionTab>
-      <AccordionTab className="pt-5" header="Process">
-      <div>
-      <ul>
-        <li>All SLAs begin from the point Studio receives all of the necessary assets OR a confirmed time slot for a client call</li>
-        <li>A minimum of 48hrs notice must be provided for all client calls. Video calls are available, but must be arranged with the client and a link added to the ARF before processing to Studio</li>
-        <li>If a Content Marketing ARF is uploaded and doesn&#39;t follow the specifications above or assets are missing, it <strong>will</strong> be put onto Query. The SLA does not begin until the Query is resolved</li>
-        <li>It is the salesperson or CST team member&#39;s responsibility to ensure all client-supplied assets have been uploaded</li>
-        <li>Before a booking is processed to Studio, <strong><u>ALL</u></strong> assets must be uploaded, including any images or videos that are to be included</li>
-        <li>No member of the Studio team should be chased prior to the SLAs listed above</li>
-        <li>Each article published must be at least 90% unique. This means that some quotes could be used across articles, but if a client wishes to &#34;re-use&#34; previously-published content, a CM Amends package should be booked, rather than a new article</li>
-      </ul>
-      <u><strong>PROOFING & AMENDS</strong></u>
-      <ul>
-        <li>As a proof is produced, the article will be scheduled to go live at the conclusion of the proofing windows listed above. If amends are not received within that time, the article will be published as per the initial proof</li>
-        <li>For a Supplied package, amends received within the proofing window will be made and the article published.</li>
-        <li>Research and Bespoke packages will receive a further proof and the client will have 48 hrs to approve or the article will be published automatically</li>
-        <li>Once an article has been published, no further changes can be made. From there, a Content Marketing Amends package would need to be processed to facilitate any changes</li>
-      </ul>
-      <u><strong>IMAGES</strong></u>
-      <ul>
-        <li>Client logos cannot be included in content marketing artices</li>
-        <li>Images cannot contain overlaid text</li>
-        <li>Display ads and posters cannot be used as images within articles</li>
-        <li>Captions and image credits should be supplied with all images</li>
-        <li>Images should be landscape, in a 3:2 ratio and between 800 and 2,500 pixels wide. JPEG is the preferred format, PNG cannot be used</li>
-      </ul>
-      <u><strong>COMPETITIONS</strong></u>
-      <ul>
-        <li>Before any competiton booking is processed, approval must be sought via <a href="mailto:mark.burrow@reachplc.com"><u>Mark Burrow</u></a>. Include full prize details and the intended publication site(s)</li>
-        <li>Once approved, the <a href="https://docs.google.com/document/d/1yddfKNHW5LHdaiTZL4LvHuZvIt9reTha/edit?usp=sharing&ouid=106703888925425801381&rtpof=true&sd=true" target="_blank"><u>Prize Provision Document</u></a> must be sent to the client and confirmation received that they agree to the terms </li>
-        <li>The <a href="https://data.reachplc.com/221644616938059" target="_blank"><u>Competition Request Jotform</u></a> can then be submitted and should contain all of the necessary details to facilitate the competition</li>
-        <li>If data capture is part of the package,  <a href="mailto:dave.rad@reachplc.com"><u>Dave Rad</u></a> must be contacted to discuss the necessary agreement</li>
-        <li>A Content Marketing ARF should then be created and processed to Studio. It should be clear via the package option and campaign brief that the booking relates to a competition </li>
-      </ul>
-      <u><strong>LISTICLES</strong></u>
-      <ul>
-        <li>A minimum of 7 clients must be booked onto every listicle. Listicles with fewer than 7 will no longer be accepted under any circumstances</li>
-        <li>Any client that falls into a category covered by the Legal Matrix below cannot be included in a listicle</li>
-        <li>The top spot in each listicle receives 150 words and 1 image. Every other slot receives 100 words and 1 image</li>
-        <li>The premium slots will appear at the top of the listicle as sold. The remaining slots appear in the order they are created in Salesforce and cannot be altered. No client should be promised a specific slot unless one of the premium slots</li>
-        <li>Only the copy provided will be used. Any missing info - call to action or contact details etc - will not be sourced by the writer</li>
-        <li>Listicles are processed to Studio when the &#39;Listicle booking complete&#39; box is ticked in Salesforce. This should only be ticked when <strong><u>ALL</u></strong> content and images has been uploaded. After this point, no further bookings can be added</li>
-        <li>The image rules above apply - client logos/posters CANNOT be used as images. The booking will not be progressed if incorrect images are provided </li>
-        <li>Each listicle must have one designated Listicle Owner within the commercial team. It is their responsibility to ensure that all copy and images are uploaded and usable. The proof will be supplied to the Listicle Owner and all proofing/amends must be collated and provided by that single point of contact</li>
-      </ul>
+        </div>
+      <div id="supplied" className="m-5">
+        <h2>Supplied</h2>
+        <Accordion>
+        <AccordionTab header="Headline">
+        {/* <h3>Headline</h3> */}
+        <p>Aim for 60-80 characters long, maximum 100. The headline should accurately reflect what the article is about. It should not include excessive punctuation or ALL CAPS</p>
+        </AccordionTab>
+        <AccordionTab header="Lead text">
+        <p>This provides extra information, includes keywords, and should make readers want to read the full article. It should be different from the headline and contain a geographical reference if applicable</p>
+        </AccordionTab>
+        <AccordionTab header="Byline">
+        <p>Add the name of your company in the byline section</p>
+        </AccordionTab>
+        <AccordionTab header="Body copy">
+        <p>Maximum of 500 words in total. Aim for every paragraph to be one or two sentences long - this makes the content more readable on mobile devices and helps with Google indexing. The intro line is recommended to be brief - a maximum of 100 words. Break down the text with suitable subheadings where necessary. These can include keywords</p>
+        <br /> Top tips:
+        <ul>
+          <li>Identify the target audience and ensure you are effectively communicating with them</li>
+          <li>Use clear and concise language and make sure your spelling and punctuation are accurate</li>
+          <li>Ensure your writing flows smoothly and communicates your message effectively</li>
+        </ul>
+        </AccordionTab>
+        <AccordionTab header="Images">
+        <ul>
+          <li>A maximum of 3 images can be included in the article</li>
+          <li>Images must be clean, text-free and in a 3:2 landscape ratio</li>
+          <li>Include an image credit where appropriate and a caption of up to eight words for every image</li>
+          <li>Written permission must be held from all subjects featured in images</li>
+          <li>By providing the images you are confirming that you hold the copyright and permission to use them for commercial purposes</li>
+        </ul>
+        </AccordionTab>
+        <AccordionTab header="Call to Action">
+        <p>This is the final paragraph at the foot of the article. Typically bolded, it will contain the contact details and is the only place in which links can be included in Supplied articles. It should be a clear signpost to readers on how to get in touch, i.e. via your website or social media channels</p>
+        </AccordionTab>
+        </Accordion>
       </div>
-      </AccordionTab>
-      <AccordionTab className="pt-5" header="Legal Matrix">
-        <div className="pt-5 pb-5"><a><br />The below is a non-exhaustive list of the industries that can only be progressed as Restricted Sector packages, if at all. The table is intended for the salesperson to determine the necessary package at the point of pitching and confirm the details that must be provided in order to progress the booking. Any booking received that does not contain the necessary information in the Details Required section will be rejected. It is the responsibility of the salesperson to verify that the details provided are valid</a></div>
-        <TreeTable value={matrixData} tableStyle={{ minWidth: '50rem'}}>
-          <Column field="category" header="Category" expander></Column>
-          <Column field="content" header="Is Content Marketing allowed?"></Column>
-          <Column field="details" header="Details required"></Column>
-        </TreeTable>
-      </AccordionTab>
-    </Accordion>
+
     </div>
 
     </main>

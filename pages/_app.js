@@ -1,5 +1,5 @@
-import * as React from 'react'
 import '../styles/globals.css'
+import * as React from 'react'
 import Layout from '../components/Layout'
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
 
