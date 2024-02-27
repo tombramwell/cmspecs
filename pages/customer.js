@@ -712,7 +712,7 @@ export default function Home() {
         <p>There should be a minimum of 5 bullet points that provide all of the information we require, plus a link to your website so that we can gather the necessary background information.</p>
         <p>Feel free to provide a line or so of copy that we can attribute to yourself - as well as your full name and job title - as a quote.</p>
         <p>If you have any images that you would like us to include, please provide them - though they must follow the guidelines in the Images section of the Supplied specification above.</p>
-        <p>Don't worry if you do not have any to supply, we will select from our extensive range of stock images to find the perfect accompaniment to the article.</p>
+        <p>Don&apos;t worry if you do not have any to supply, we will select from our extensive range of stock images to find the perfect accompaniment to the article.</p>
       </div>
       <div id="bespoke" className="m-5">
         <h2>Bespoke</h2>
