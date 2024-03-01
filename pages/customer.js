@@ -666,9 +666,9 @@ export default function Home() {
         <p><em>In a world where everything is &quot;content&quot;, what is content marketing?</em></p>
         <p>Put simply, content marketing is all about creating and distributing content that provides value to the reader.</p>
         <p>Articles that they find relevant and engaging will help to attract and retain their attention, fostering brand loyalty and helping to position the clients we work with as the experts in their field.</p>
-        <p>The core premise is you are able to deliver your message in our voice. When coupled with the access we can provide to the unparalleled advantages of the Reach network of regional and national publications, it can deliver incredible results - but only when done properly.</p>
-        <p>It&apos;s important to be aware that successful content marketing isn&apos;t about providing a business overview or pitching specific products and services.</p>
-        <p>Instead, it should focus on providing truly relevant and useful content that our audience can use to help them solve their issues - ultimately driving profitable customer action by converting the reader into your consumer.</p>
+        <p>The core premise is you are able to deliver your message in our voice. When coupled with the access we can provide to the unparalleled advantages of the Reach network of regional and national publications, it can deliver incredible results - when done properly.</p>
+        <p>Successful content marketing isn&apos;t about providing a business overview or pitching specific products and services.</p>
+        <p>It should focus on providing truly relevant and useful content that our audience can use to help them solve their issues - ultimately driving profitable customer action by converting the reader into your consumer.</p>
      </div>
       <div id="supplied" className="m-5">
         <h2>Supplied</h2>
@@ -718,11 +718,13 @@ export default function Home() {
         <h2>Bespoke</h2>
         <p>The following form has been designed to provide all of the information required to craft a quality Bespoke content marketing article that delivers exceptional results.</p>
         <p>Please provide as much information as possible. The writer may get in touch should any points of clarification be required, but this may delay the publication of the article.</p>
-        <p>Once completed, click the Save button and a PDF will be downloaded to your device. Please email this directly to your Reach account manager, who will process it along with the Content Marketing booking.</p>
+        <p>If you have any images that you would like us to include, please provide them - though they must follow the guidelines in the Images section of the Supplied specification above.</p>
+        <p>Once completed, click the Save button and a PDF will be downloaded to your device. Please email this, along with any images to be included, directly to your Reach account manager who will process it along with the Content Marketing booking.</p>
       </div>
     </div>
-
     </main>
     </>
   );
 }
+
+

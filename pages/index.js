@@ -715,9 +715,11 @@ export default function Home() {
       </ul>
       <u><strong>IMAGES</strong></u>
       <ul>
+        <li>A minimum of one image must be included within every Content Marketing article, even if a video is also included. The maximum images for each package are listed in the specifications above</li>
         <li>Client logos cannot be included in content marketing artices</li>
         <li>Images cannot contain overlaid text</li>
         <li>Display ads and posters cannot be used as images within articles</li>
+        <li>Images are not clickable and cannot be hyperlinked</li>
         <li>Captions and image credits should be supplied with all images</li>
         <li>Images should be landscape, in a 3:2 ratio and between 800 and 2,500 pixels wide. JPEG is the preferred format, PNG cannot be used</li>
       </ul>
