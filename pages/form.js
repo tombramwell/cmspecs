@@ -30,9 +30,12 @@ export default function Form() {
   
         const pdf = new jsPDF("l", "pt", "a4");
         if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase())) {
-          var blob = pdf.output(data);
-          window.open(URL.createObjectURL(new File([blob], fileName)));
-
+          var blob = pdf.output();
+          // window.open(URL.createObjectURL(new Blob([blob], { type: "application/pdf" })));
+          var blobURL = URL.createObjectURL(new Blob[blob], { type: "application/pdf" });
+          var file = new File([blob, fileName, {type: "application/pdf"}]);
+          window.open(file)
+          
       } else {
 
         pdf.html(element, {
