@@ -1,12 +1,39 @@
+"use client";
 import React, { useState, useEffect } from 'react';
 import { InputText } from "primereact/inputtext";
 import { InputTextarea } from "primereact/inputtextarea";
+import { Button } from 'primereact/button';
+import jsPDF from "jspdf";
+import html2canvas from "html2canvas";
 
 export default function Form() {
   const [businessName, setBusinessName] = useState('');
   const [industry, setIndustry] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
-  const [reason, setReason] = useState('')
+  const [reason, setReason] = useState('');
+  const [keyMessaging, setKeyMessaging] = useState('');
+  const [backgroundInfo, setBackgroundInfo] = useState('');
+  const [eventsOffers, setEventsOffers] = useState('');
+  const [imagesVideo, setImagesVideo] = useState('');
+  const [quotes, setQuotes] = useState('');
+  const [referencePoints, setReferencePoints] = useState('');
+  const [additionalPoints, setAdditionalPoints] = useState('');
+  const [contactDetails, setContactDetails] = useState('');
+
+  const handleDownloadPDF = async () => {
+      const element = document.getElementById("bespokeForm");
+      if (element) {
+        const canvas = await html2canvas(element);
+        const data = canvas.toDataURL("image/png");
+  
+        const pdf = new jsPDF("l", "pt", "a4");
+        pdf.html(document.getElementById("bespokeForm"), {
+          callback: function () {
+            pdf.save(`${businessName}`+".pdf");
+          },
+        });
+      }
+    }
 
   return (
     <>
@@ -34,6 +61,61 @@ export default function Form() {
         <div className="flex flex-column gap-2">
           <label htmlFor="reasoning">Reason for advertising</label>
           <InputTextarea autoResize value={reason} onChange={(e) => setReason(e.target.value)} rows={5} cols={30} />
+        </div>
+        <div className="flex flex-column gap-2">
+          <label htmlFor="keyMessaging">Key messaging: What are the important things you want to say about your business?</label>
+          <InputTextarea autoResize value={keyMessaging} aria-describedby="keyMessaging-help" onChange={(e) => setKeyMessaging(e.target.value)} rows={7} cols={30} />
+          <small id="keyMessaging-help">
+              <ul>
+                <li>What are your USPs? Have you won any awards?</li>
+                <li>What makes you stand out from your competitors?</li>
+                <li>What do your customers/clients like about your business?</li>
+                <li>What about your business makes you most proud?</li>
+              </ul>
+          </small>
+        </div>
+        <div className="flex flex-column gap-2">
+          <label htmlFor="backgroundInfo">Please provide some background information about your business</label>
+          <InputTextarea autoResize value={backgroundInfo} aria-describedby="backgroundInfo-help" onChange={(e) => setBackgroundInfo(e.target.value)} rows={5} cols={30} />
+          <small id="backgroundInfo-help">
+            You can include business history, location(s), key directors' or employees' background, mission statements and anything else you feel it is important to include
+          </small>
+        </div>
+        <div className="flex flex-column gap-2">
+          <label htmlFor="eventsOffers">If applicable, are there any events or offers you'd like us to cover?</label>
+          <InputTextarea autoResize value={eventsOffers} onChange={(e) => setEventsOffers(e.target.value)} rows={5} cols={30} />
+        </div>
+        <div className="flex flex-column gap-2">
+          <label htmlFor="imagesVideo">What images and/or video are you providing?</label>
+          <InputTextarea autoResize value={imagesVideo} aria-describedby="imagesVideo-help" onChange={(e) => setImagesVideo(e.target.value)} rows={5} cols={30} />
+          <small id="imagesVideo-help">
+            Attach these elements to the email to your Reach sales contact. Here, please provide names and locations to be included in photo captions, along with any image credits that may need to be included
+          </small>
+        </div>
+        <div className="flex flex-column gap-2">
+          <label htmlFor="quotes">Please provide some words that you're happy for us to use as quotes to support the theme of the article</label>
+          <InputTextarea autoResize value={quotes} aria-describedby="quotes-help" onChange={(e) => setQuotes(e.target.value)} rows={5} cols={30} />
+          <small id="quotes-help">
+            This can be attributed to the business owner or a relevant employee. Please provide the name and job role of anyone to be named as the quote provider
+          </small>
+        </div>
+        <div className="flex flex-column gap-2">
+          <label htmlFor="referencePoints">Other helpful points of reference</label>
+          <InputTextarea autoResize value={referencePoints} aria-describedby="referencePoints-help" onChange={(e) => setReferencePoints(e.target.value)} rows={5} cols={30} />
+          <small id="referencePoints-help">
+            E.g. website, social media channels or previous articles that may be useful to form part of the writer's research
+          </small>
+        </div>
+        <div className="flex flex-column gap-2">
+          <label htmlFor="additionalPoints">Is there anything else that hasn't been covered that you'd like to be included in this article?</label>
+          <InputTextarea autoResize value={additionalPoints} onChange={(e) => setAdditionalPoints(e.target.value)} rows={5} cols={30} />
+        </div>
+        <div className="flex flex-column gap-2">
+          <label htmlFor="contactDetails">Please provide your contact details should the writer need to contact you for any clarification</label>
+          <InputTextarea autoResize value={contactDetails} onChange={(e) => setContactDetails(e.target.value)} rows={5} cols={30} />
+        </div>
+        <div className="card flex justify-content-center">
+            <Button label="Save to device" onClick={() => handleDownloadPDF()}  />
         </div>
     </div>
     </div>
