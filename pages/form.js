@@ -33,7 +33,7 @@ export default function Form() {
           var blob = pdf.output();
           // window.open(URL.createObjectURL(new Blob([blob], { type: "application/pdf" })));
           var file = new File(blob, {name: fileName}, {type: "application/pdf"});
-          window.open(URL.createObjectURL(file));
+          window.open(file, '_blank');
 
       } else {
 
