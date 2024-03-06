@@ -25,16 +25,23 @@ export default function Form() {
       if (element) {
         const canvas = await html2canvas(element);
         const data = canvas.toDataURL("image/png");
+        const fileName = `${businessName}`+".pdf";
   
         const pdf = new jsPDF("l", "pt", "a4");
+        if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase())) {
+          window.open(doc.output('bloburl', { filename: fileName }))
+      } else {
+
         pdf.html(document.getElementById("bespokeForm"), {
+          
           callback: function () {
-            pdf.save(`${businessName}`+".pdf");
+            pdf.save(fileName);
           },
         });
       }
     }
-
+  }
+  
   return (
     <>
     <main className="min-h-screen pt-5">
