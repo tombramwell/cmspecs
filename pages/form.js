@@ -22,6 +22,9 @@ export default function Form() {
 
   const handleDownloadPDF = async () => {
       const element = document.getElementById("bespokeForm");
+      var blobPDF = new Blob([ doc.output()], { type: 'application/pdf' });
+      var blobUrl = URL.createObjectURL(blobPDF)
+
       if (element) {
         const canvas = await html2canvas(element);
         const data = canvas.toDataURL("image/png");
@@ -29,7 +32,7 @@ export default function Form() {
   
         const pdf = new jsPDF("l", "pt", "a4");
         if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase())) {
-          window.open(doc.output('bloburl', { filename: fileName }))
+          window.open(doc.output(blobUrl, { filename: fileName }))
       } else {
 
         pdf.html(document.getElementById("bespokeForm"), {
@@ -41,7 +44,7 @@ export default function Form() {
       }
     }
   }
-  
+
   return (
     <>
     <main className="min-h-screen pt-5">
