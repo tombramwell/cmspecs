@@ -32,7 +32,7 @@ export default function Form() {
   
         const pdf = new jsPDF("l", "pt", "a4");
         if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase())) {
-          window.open(doc.output(blobUrl, { filename: fileName }))
+          window.open(blobUrl, { filename: fileName });
       } else {
 
         pdf.html(document.getElementById("bespokeForm"), {
