@@ -36,9 +36,10 @@ export default function Form() {
           a.href = URL.createObjectURL(new Blob([blob], { type: 'application/pdf' }));
           a.download = fileName;
           
-          // For Internet Explorer
-          if (window.navigator && window.navigator.msSaveBlob) {
-            window.navigator.msSaveBlob(new Blob([blob], { type: 'application/pdf' }), fileName);
+          // For Safari on iOS
+          if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+            const downloadMessage = "Press and hold the link to download the PDF.";
+            alert(downloadMessage);
           } else {
             // For other browsers
             a.style.display = 'none';
