@@ -22,8 +22,6 @@ export default function Form() {
 
   const handleDownloadPDF = async () => {
       const element = document.getElementById("bespokeForm");
-      var blobPDF = new Blob([ doc.output()], { type: 'application/pdf' });
-      var blobUrl = URL.createObjectURL(blobPDF)
 
       if (element) {
         const canvas = await html2canvas(element);
@@ -32,7 +30,10 @@ export default function Form() {
   
         const pdf = new jsPDF("l", "pt", "a4");
         if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase())) {
+          var blobPDF = new Blob([ doc.output()], { type: 'application/pdf' });
+          var blobUrl = URL.createObjectURL(blobPDF)
           window.open(blobUrl, { filename: fileName });
+          
       } else {
 
         pdf.html(document.getElementById("bespokeForm"), {
