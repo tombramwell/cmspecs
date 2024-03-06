@@ -35,10 +35,17 @@ export default function Form() {
           const a = document.createElement('a');
           a.href = URL.createObjectURL(new Blob([blob], { type: 'application/pdf' }));
           a.download = fileName;
-          a.style.display = 'none';
-          document.body.appendChild(a);
-          a.click();
-          document.body.removeChild(a);
+          
+          // For Internet Explorer
+          if (window.navigator && window.navigator.msSaveBlob) {
+            window.navigator.msSaveBlob(new Blob([blob], { type: 'application/pdf' }), fileName);
+          } else {
+            // For other browsers
+            a.style.display = 'none';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+          }
 
       } else {
 
