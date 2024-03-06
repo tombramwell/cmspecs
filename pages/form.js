@@ -78,11 +78,11 @@ export default function Form() {
           <label htmlFor="backgroundInfo">Please provide some background information about your business</label>
           <InputTextarea autoResize value={backgroundInfo} aria-describedby="backgroundInfo-help" onChange={(e) => setBackgroundInfo(e.target.value)} rows={5} cols={30} />
           <small id="backgroundInfo-help">
-            You can include business history, location(s), key directors' or employees' background, mission statements and anything else you feel it is important to include
+            You can include business history, location(s), key directors&apos; or employees&apos; background, mission statements and anything else you feel it is important to include
           </small>
         </div>
         <div className="flex flex-column gap-2">
-          <label htmlFor="eventsOffers">If applicable, are there any events or offers you'd like us to cover?</label>
+          <label htmlFor="eventsOffers">If applicable, are there any events or offers you&apos;d like us to cover?</label>
           <InputTextarea autoResize value={eventsOffers} onChange={(e) => setEventsOffers(e.target.value)} rows={5} cols={30} />
         </div>
         <div className="flex flex-column gap-2">
@@ -93,7 +93,7 @@ export default function Form() {
           </small>
         </div>
         <div className="flex flex-column gap-2">
-          <label htmlFor="quotes">Please provide some words that you're happy for us to use as quotes to support the theme of the article</label>
+          <label htmlFor="quotes">Please provide some words that you&apos;re happy for us to use as quotes to support the theme of the article</label>
           <InputTextarea autoResize value={quotes} aria-describedby="quotes-help" onChange={(e) => setQuotes(e.target.value)} rows={5} cols={30} />
           <small id="quotes-help">
             This can be attributed to the business owner or a relevant employee. Please provide the name and job role of anyone to be named as the quote provider
@@ -103,11 +103,11 @@ export default function Form() {
           <label htmlFor="referencePoints">Other helpful points of reference</label>
           <InputTextarea autoResize value={referencePoints} aria-describedby="referencePoints-help" onChange={(e) => setReferencePoints(e.target.value)} rows={5} cols={30} />
           <small id="referencePoints-help">
-            E.g. website, social media channels or previous articles that may be useful to form part of the writer's research
+            E.g. website, social media channels or previous articles that may be useful to form part of the writer&apos;s research
           </small>
         </div>
         <div className="flex flex-column gap-2">
-          <label htmlFor="additionalPoints">Is there anything else that hasn't been covered that you'd like to be included in this article?</label>
+          <label htmlFor="additionalPoints">Is there anything else that hasn&apos;t been covered that you&apos;d like to be included in this article?</label>
           <InputTextarea autoResize value={additionalPoints} onChange={(e) => setAdditionalPoints(e.target.value)} rows={5} cols={30} />
         </div>
         <div className="flex flex-column gap-2">
