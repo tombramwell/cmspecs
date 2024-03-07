@@ -23,15 +23,17 @@ export default function Form() {
   const [contactDetails, setContactDetails] = useState('');
   const [mobile, setMobile] = useState(false);
 
+
   useEffect(() => {
     if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
       setMobile(true);
     }
   }, [])
 
+  let blob = null;
+
   const handleDownloadPDF = async () => {
     const element = document.getElementById("bespokeForm");
-    let blob = null; // Set a default value
   
     if (element) {
       const canvas = await html2canvas(element);
