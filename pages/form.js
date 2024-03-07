@@ -21,6 +21,13 @@ export default function Form() {
   const [referencePoints, setReferencePoints] = useState('');
   const [additionalPoints, setAdditionalPoints] = useState('');
   const [contactDetails, setContactDetails] = useState('');
+  const [mobile, setMobile] = useState(false);
+
+  useEffect(() => {
+    if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+      setMobile(true);
+    }
+  }, [])
 
   const handleDownloadPDF = async () => {
       const element = document.getElementById("bespokeForm");
@@ -32,26 +39,26 @@ export default function Form() {
   
         const pdf = new jsPDF("l", "pt", "a4");
         if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase())) {
-          // var blob = pdf.output();
-          // // window.open(URL.createObjectURL(new Blob([blob], { type: "application/pdf" })));
-          // const a = document.createElement('a');
-          // a.href = URL.createObjectURL(new Blob([blob], { type: 'application/pdf' }));
-          // a.download = fileName;
+          var blob = pdf.output();
+          // window.open(URL.createObjectURL(new Blob([blob], { type: "application/pdf" })));
+          const a = document.createElement('a');
+          a.href = URL.createObjectURL(new Blob([blob], { type: 'application/pdf' }));
+          a.download = fileName;
           
-          // // For Safari on iOS
-          // if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
-          //   const downloadMessage = "Press and hold the link to download the PDF.";
-          //   alert(downloadMessage);
-          // } else {
-          //   // For other browsers
-          //   a.style.display = 'none';
-          //   document.body.appendChild(a);
-          //   a.click();
-          //   document.body.removeChild(a);
-          // }
-          var blob = pdf.output(document.getElementById("bespokeForm"));
-          var file = new File([blob], fileName, {type: "application/pdf"});
-          saveAs(file);
+          // For Safari on iOS
+          if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+            const downloadMessage = "Press and hold the link to download the PDF.";
+            alert(downloadMessage);
+          } else {
+            // For other browsers
+            a.style.display = 'none';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+          }
+          // var blob = pdf.output(document.getElementById("bespokeForm"));
+          // var file = new File([blob], fileName, {type: "application/pdf"});
+          // saveAs(file);
 
       } else {
 
@@ -144,9 +151,15 @@ export default function Form() {
           <label htmlFor="contactDetails">Please provide your contact details should the writer need to contact you for any clarification</label>
           <InputTextarea autoResize value={contactDetails} onChange={(e) => setContactDetails(e.target.value)} rows={5} cols={30} />
         </div>
+        {mobile === false ? <div>
         <div className="card flex justify-content-center">
-            <Button label="Save to device" onClick={() => handleDownloadPDF()}  />
+            <Button label="Download" onClick={() => handleDownloadPDF()}  />
         </div>
+        </div> :
+        <div className="card flex justify-content-center">
+            <a onClick={() => handleDownloadPDF()}><u>Click and hold this link to save to device</u></a>
+        </div>
+    }
     </div>
     </div>
     </main>
