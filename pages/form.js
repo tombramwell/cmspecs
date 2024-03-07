@@ -5,6 +5,8 @@ import { InputTextarea } from "primereact/inputtextarea";
 import { Button } from 'primereact/button';
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
+import { saveAs } from 'file-saver';
+
 
 export default function Form() {
   const [businessName, setBusinessName] = useState('');
@@ -30,23 +32,26 @@ export default function Form() {
   
         const pdf = new jsPDF("l", "pt", "a4");
         if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase())) {
-          var blob = pdf.output();
-          // window.open(URL.createObjectURL(new Blob([blob], { type: "application/pdf" })));
-          const a = document.createElement('a');
-          a.href = URL.createObjectURL(new Blob([blob], { type: 'application/pdf' }));
-          a.download = fileName;
+          // var blob = pdf.output();
+          // // window.open(URL.createObjectURL(new Blob([blob], { type: "application/pdf" })));
+          // const a = document.createElement('a');
+          // a.href = URL.createObjectURL(new Blob([blob], { type: 'application/pdf' }));
+          // a.download = fileName;
           
-          // For Safari on iOS
-          if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
-            const downloadMessage = "Press and hold the link to download the PDF.";
-            alert(downloadMessage);
-          } else {
-            // For other browsers
-            a.style.display = 'none';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-          }
+          // // For Safari on iOS
+          // if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+          //   const downloadMessage = "Press and hold the link to download the PDF.";
+          //   alert(downloadMessage);
+          // } else {
+          //   // For other browsers
+          //   a.style.display = 'none';
+          //   document.body.appendChild(a);
+          //   a.click();
+          //   document.body.removeChild(a);
+          // }
+          var blob = pdf.output(document.getElementById("bespokeForm"));
+          var file = new File([blob], fileName, {type: "application/pdf"});
+          saveAs(file);
 
       } else {
 
