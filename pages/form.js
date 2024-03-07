@@ -157,7 +157,7 @@ export default function Form() {
         </div>
         </div> :
         <div className="card flex justify-content-center">
-            <a onClick={() => handleDownloadPDF()}><u>Click and hold this link to save to device</u></a>
+            <a href="" onClick={() => handleDownloadPDF()}><u>Click and hold this link to save to device</u></a>
         </div>
     }
     </div>
