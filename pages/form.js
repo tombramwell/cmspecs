@@ -45,20 +45,7 @@ export default function Form() {
           a.href = URL.createObjectURL(new Blob([blob], { type: 'application/pdf' }));
           a.download = fileName;
           
-          // For Safari on iOS
-          if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
-            const downloadMessage = "Press and hold the link to download the PDF.";
-            alert(downloadMessage);
-          } else {
-            // For other browsers
-            a.style.display = 'none';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-          }
-          // var blob = pdf.output(document.getElementById("bespokeForm"));
-          // var file = new File([blob], fileName, {type: "application/pdf"});
-          // saveAs(file);
+
 
       } else {
 
@@ -157,7 +144,7 @@ export default function Form() {
         </div>
         </div> :
         <div className="card flex justify-content-center">
-            <a href="" onClick={() => handleDownloadPDF()}><u>Click and hold this link to save to device</u></a>
+            <a href={URL.createObjectURL(new Blob([blob], { type: 'application/pdf' }))} onClick={() => handleDownloadPDF()}><u>Click and hold this link to save to device</u></a>
         </div>
     }
     </div>
