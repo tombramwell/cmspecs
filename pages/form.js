@@ -30,27 +30,25 @@ export default function Form() {
   }, [])
 
   const handleDownloadPDF = async () => {
-      const element = document.getElementById("bespokeForm");
-      let blob;
-
-      if (element) {
-        const canvas = await html2canvas(element);
-        const data = canvas.toDataURL("image/png");
-        const fileName = `${businessName}`+".pdf";
+    const element = document.getElementById("bespokeForm");
+    let blob = null; // Set a default value
   
-        const pdf = new jsPDF("l", "pt", "a4");
-        if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase())) {
-          // window.open(URL.createObjectURL(new Blob([blob], { type: "application/pdf" })));
-          const a = document.createElement('a');
-          a.href = URL.createObjectURL(new Blob([blob], { type: 'application/pdf' }));
-          a.download = fileName;
-          
-
-
+    if (element) {
+      const canvas = await html2canvas(element);
+      blob = new Blob([canvas.toDataURL("image/png")], { type: 'application/pdf' });
+      const fileName = `${businessName}.pdf`;
+  
+      const pdf = new jsPDF("l", "pt", "a4");
+      
+      if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase())) {
+        // For mobile devices
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = fileName;
+        a.click();
       } else {
-
+        // For other devices
         pdf.html(element, {
-          
           callback: function () {
             pdf.save(fileName);
           },
