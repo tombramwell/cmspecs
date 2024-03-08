@@ -4,6 +4,8 @@ import { InputText } from "primereact/inputtext";
 import { InputTextarea } from "primereact/inputtextarea";
 import { Button } from 'primereact/button';
 import jsPDF from "jspdf";
+import html2canvas from "html2canvas";
+import { saveAs } from 'file-saver';
 
 
 export default function Form() {
@@ -19,15 +21,43 @@ export default function Form() {
   const [referencePoints, setReferencePoints] = useState('');
   const [additionalPoints, setAdditionalPoints] = useState('');
   const [contactDetails, setContactDetails] = useState('');
+  const [mobile, setMobile] = useState(false);
 
-const generatePDF = (formData) => {
-  const pdf = new jsPDF();
-  pdf.text(20, 20, `Business name: ${businessName}`)
-  pdf.text(20, 30, `Industry: ${industry}`)
 
-  pdf.save(`${businessName}.pdf`);
-}
+  // useEffect(() => {
+  //   if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+  //     setMobile(true);
+  //   }
+  // }, [])
 
+  // let blob = null;
+
+  // const handleDownloadPDF = async () => {
+  //   const element = document.getElementById("bespokeForm");
+  
+  //   if (element) {
+  //     const canvas = await html2canvas(element);
+  //     blob = new Blob([canvas.toDataURL("image/png")], { type: 'application/pdf' });
+  //     const fileName = `${businessName}.pdf`;
+  
+  //     const pdf = new jsPDF("l", "pt", "a4");
+      
+  //     if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase())) {
+  //       // For mobile devices
+  //       const a = document.createElement('a');
+  //       a.href = URL.createObjectURL(blob);
+  //       a.download = fileName;
+  //       a.click();
+  //     } else {
+  //       // For other devices
+  //       pdf.html(element, {
+  //         callback: function () {
+  //           pdf.save(fileName);
+  //         },
+  //       });
+  //     }
+  //   }
+  // }
 
   return (
     <>
@@ -108,9 +138,15 @@ const generatePDF = (formData) => {
           <label htmlFor="contactDetails">Please provide your contact details should the writer need to contact you for any clarification</label>
           <InputTextarea autoResize value={contactDetails} onChange={(e) => setContactDetails(e.target.value)} rows={5} cols={30} />
         </div>
+        {mobile === false ? <div>
         <div className="card flex justify-content-center">
-            <Button label="Download" onClick={() => generatePDF()}  />
+            <Button label="Download" onClick={() => handleDownloadPDF()}  />
         </div>
+        </div> :
+        <div className="card flex justify-content-center">
+            <a href={URL.createObjectURL(new Blob([blob], { type: 'application/pdf' }))} onClick={() => handleDownloadPDF()}><u>Click and hold this link to save to device</u></a>
+        </div>
+    }
     </div>
     </div>
     </main>
