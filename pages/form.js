@@ -20,10 +20,60 @@ export default function Form() {
   const [additionalPoints, setAdditionalPoints] = useState('');
   const [contactDetails, setContactDetails] = useState('');
 
-const generatePDF = (formData) => {
-  const pdf = new jsPDF();
-  pdf.text(20, 20, `Business name: ${businessName}`)
-  pdf.text(20, 30, `Industry: ${industry}`)
+  const generatePDF = (formData) => {
+    const pdf = new jsPDF();
+    const margin = 20;
+    const maxWidth = pdf.internal.pageSize.width - 2 * margin;
+    let currentY = margin;
+  
+    // Function to add text to PDF with dynamic spacing, word wrapping, and different font styles
+    const addTextWithStyles = (text, isBold) => {
+      const fontType = isBold ? 'bold' : 'normal';
+      pdf.setFont(undefined, fontType);
+  
+      const lines = pdf.splitTextToSize(text, maxWidth);
+      
+      for (const line of lines) {
+        // Check if there's enough space for a new line, otherwise add a new page
+        if (currentY + 10 > pdf.internal.pageSize.height - margin) {
+          pdf.addPage();
+          currentY = margin;
+        }
+        
+        pdf.text(margin, currentY, line);
+        currentY += 10; // Adjust this value based on your preferred line height
+      }
+  
+      currentY += 5; // Add extra spacing between responses and next field name
+      pdf.setFont(undefined, 'normal'); // Reset to normal font after adding the text
+    };
+  
+  
+
+  addTextWithStyles('Business name: ', true)
+  addTextWithStyles(`${businessName}`, false)
+  addTextWithStyles('Industry: ', true)
+  addTextWithStyles(`${industry}`, false)
+  addTextWithStyles('Target audience: ', true)
+  addTextWithStyles(`${targetAudience}`, false)
+  addTextWithStyles('Reason for advertising: ', true)
+  addTextWithStyles(`${reason}`, false)
+  addTextWithStyles('Key messaging: ', true)
+  addTextWithStyles(`${keyMessaging}`, false)
+  addTextWithStyles('Background info: ', true)
+  addTextWithStyles(`${backgroundInfo}`, false)
+  addTextWithStyles('Events/Offers: ', true)
+  addTextWithStyles(`${eventsOffers}`, false)
+  addTextWithStyles('Images/Video: ', true)
+  addTextWithStyles(`${imagesVideo}`, false)
+  addTextWithStyles('Quotes: ', true)
+  addTextWithStyles(`${quotes}`, false)
+  addTextWithStyles('Reference points: ', true)
+  addTextWithStyles(`${referencePoints}`, false)
+  addTextWithStyles('Additional info: ', true)
+  addTextWithStyles(`${additionalPoints}`, false)
+  addTextWithStyles('Contact details: ', true)
+  addTextWithStyles(`${contactDetails}`, false)
 
   pdf.save(`${businessName}.pdf`);
 }
