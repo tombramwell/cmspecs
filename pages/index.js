@@ -532,24 +532,35 @@ export default function Home() {
 }
 }
 ]
-},{
+},
+{
   id: '11',
   key: '11',
+  label: 'Comparative advertising',
+  data: {
+    category: 'Comparative advertising',
+    content: 'Restricted Sector',
+    details: [<div key='11'>Content that compares the advertiser to one or more of its competitors may be deemed to be &apos;comparative advertising&apos;, which is permissible but subject to complex ASA rules, so can only be progressed as a Restricted Sector booking</div>]
+  }
+}
+,{
+  id: '12',
+  key: '12',
   label: 'Alcohol',
   data: {
     category: 'Alcohol',
     content: 'Bespoke',
-    details: [<div key='11'>* Name of the advertiser (not the agency)<br />* Contact number of an officer of the company<br />* Company address<br /><em>NB: While a legal check is not required, the content must follow all of the <a href="https://www.asa.org.uk/advice-online/alcohol-general.html" target="_blank"><u>ASA Guidelines</u></a> on alcohol advertising</em></div>]
+    details: [<div key='12'>* Name of the advertiser (not the agency)<br />* Contact number of an officer of the company<br />* Company address<br /><em>NB: While a legal check is not required, the content must follow all of the <a href="https://www.asa.org.uk/advice-online/alcohol-general.html" target="_blank"><u>ASA Guidelines</u></a> on alcohol advertising</em></div>]
   }
 },
 {
-  id: '12',
-  key: '12',
+  id: '13',
+  key: '13',
   label: 'Fireworks',
   data: {
     category: 'Fireworks',
     content: 'Bespoke',
-    details: [<div key='12'>* Name of the advertiser (not the agency)<br />* Contact number of an officer of the company<br />* Company address<br />* Evidence that the client has a valid UK licence to sell fireworks all year round</div>]
+    details: [<div key='13'>* Name of the advertiser (not the agency)<br />* Contact number of an officer of the company<br />* Company address<br />* Evidence that the client has a valid UK licence to sell fireworks all year round</div>]
   }
 }
 ]

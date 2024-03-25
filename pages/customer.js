@@ -6,6 +6,7 @@ import { Accordion, AccordionTab } from 'primereact/accordion';
 import { TreeTable } from 'primereact/treetable';
 import { Inplace, InplaceDisplay, InplaceContent } from 'primereact/inplace';
 import { InputText } from "primereact/inputtext";
+import { Splitter, SplitterPanel } from 'primereact/splitter';
 
 export default function Home() {
   const [clientNameValue, setClientNameValue] = useState('')

@@ -75,7 +75,7 @@ export default function Form() {
   addTextWithStyles('Contact details: ', true)
   addTextWithStyles(`${contactDetails}`, false)
 
-  pdf.save(`${businessName}.pdf`);
+  pdf.save(`Reach Content Marketing - ${businessName}.pdf`);
 }
 
 
@@ -161,6 +161,7 @@ export default function Form() {
         <div className="card flex justify-content-center">
             <Button label="Download" onClick={() => generatePDF()}  />
         </div>
+        <p>iOS users will need to &apos;Share&apos; the generated file</p>
     </div>
     </div>
     </main>
