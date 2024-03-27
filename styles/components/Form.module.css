@@ -1,0 +1,76 @@
+body{
+    background-color: var(--reach-grey40);
+}
+
+#header{
+    background-color: var(--reach-lightblue);
+}
+
+.header_container__ZGWKO{
+    width: calc(100vw - 40px);
+}
+
+.header_container__ZGWKO img{
+    margin: 0 auto;
+}
+
+.header_box__scBtM{
+    display: none;
+}
+
+#bespokeForm{
+    position: relative;
+    left: -20px;
+    max-width: 800px;
+    padding: 40px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+#bespokeForm:before{
+    content: "Content Marketing Form";
+    margin: 0 auto;
+    text-align: center;
+    font-size: 48px;
+    line-height: 48px;
+    font-weight:900;
+    color: var(--reach-blue);
+    margin-bottom: 200px !important;
+}
+
+.flex {
+    display: block !important;
+    margin-bottom: 40px;
+}
+
+.flex-column label{
+    color: var(--reach-blue);
+    font-weight: 900;
+}
+
+input, textarea{
+    display: block;
+    border: 1px solid var(--reach-grey60);
+    width: 100%;
+    padding: 10px;
+}
+
+small{
+    display: block;
+    color: var(--reach-blue);
+    width: 100%;
+    font-style: italic;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: var(--reach-yellow);
+    color: var(--reach-blue);
+    font-size: 24px;
+    font-weight: 900;
+}
+
+p{
+    font-style: italic;
+    color: var(--reach-blue);
+}
