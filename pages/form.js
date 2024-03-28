@@ -48,6 +48,11 @@ export default function Form() {
       pdf.setFont(undefined, 'normal'); // Reset to normal font after adding the text
     };
   
+  const imgData = 'https://i.imgur.com/OZu2qws.png'
+  const imgWidth = 100;
+  const imgHeight = 27;
+  pdf.addImage(imgData, 'PNG', margin, currentY, imgWidth, imgHeight);
+  currentY += imgHeight + 10;
   
 
   addTextWithStyles('Business name: ', true)
@@ -75,7 +80,10 @@ export default function Form() {
   addTextWithStyles('Contact details: ', true)
   addTextWithStyles(`${contactDetails}`, false)
 
+
+
   pdf.save(`Reach Content Marketing - ${businessName}.pdf`);
+
 }
 
 
@@ -161,8 +169,8 @@ export default function Form() {
         </div>
         <div className="card flex justify-content-center">
             <Button label="Download" onClick={() => generatePDF()}  />
+            <small>iOS users will need to &apos;Share&apos; the generated file</small>
         </div>
-        <p>iOS users will need to &apos;Share&apos; the generated file</p>
     </div>
     </div>
     </main>
