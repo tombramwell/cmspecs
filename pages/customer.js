@@ -677,12 +677,15 @@ export default function Home() {
         <AccordionTab header="Headline">
         {/* <h3>Headline</h3> */}
         <p>Aim for 60-80 characters long, maximum 100. The headline should accurately reflect what the article is about. It should not include excessive punctuation or ALL CAPS</p>
+        <img src="https://i.imgur.com/OZu2qws.png" />
         </AccordionTab>
         <AccordionTab header="Lead text">
         <p>This provides extra information, includes keywords, and should make readers want to read the full article. It should be different from the headline and contain a geographical reference if applicable</p>
+        <img src="https://i.imgur.com/OZu2qws.png" />
         </AccordionTab>
         <AccordionTab header="Byline">
         <p>Add the name of your company in the byline section</p>
+        <img src="https://i.imgur.com/OZu2qws.png" />
         </AccordionTab>
         <AccordionTab header="Body copy">
         <p>Maximum of 500 words in total. Aim for every paragraph to be one or two sentences long - this makes the content more readable on mobile devices and helps with Google indexing. The intro line is recommended to be brief - a maximum of 100 words. Break down the text with suitable subheadings where necessary. These can include keywords</p>
@@ -692,6 +695,7 @@ export default function Home() {
           <li>Use clear and concise language and make sure your spelling and punctuation are accurate</li>
           <li>Ensure your writing flows smoothly and communicates your message effectively</li>
         </ul>
+        <img src="https://i.imgur.com/OZu2qws.png" />
         </AccordionTab>
         <AccordionTab header="Images">
         <ul>
@@ -701,9 +705,11 @@ export default function Home() {
           <li>Written permission must be held from all subjects featured in images</li>
           <li>By providing the images you are confirming that you hold the copyright and permission to use them for commercial purposes</li>
         </ul>
+        <img src="https://i.imgur.com/OZu2qws.png" />
         </AccordionTab>
         <AccordionTab header="Call to Action">
         <p>This is the final paragraph at the foot of the article. Typically bolded, it will contain the contact details and is the only place in which links can be included in Supplied articles. It should be a clear signpost to readers on how to get in touch, i.e. via your website or social media channels</p>
+        <img src="https://i.imgur.com/OZu2qws.png" />
         </AccordionTab>
         </Accordion>
       </div>
