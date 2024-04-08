@@ -654,7 +654,7 @@ export default function Home() {
     <main className="min-h-screen pt-5">
     <div className="ml-10">
         <div id="packagesTable" className="m-5">
-            <DataTable value={data} className="pt-5 pb-5" showGridlines style={{minWidth: '50rem'}}>
+            <DataTable value={data} className="pt-5 pb-5" showGridlines>
                 <Column field="package" frozen header=" " body={packageTemplate}></Column>
                 <Column field="supplied" header="Supplied" body={suppliedTemplate}></Column>
                 <Column field="research" header="Research" body={researchTemplate}></Column>
@@ -676,15 +676,38 @@ export default function Home() {
         <Accordion>
         <AccordionTab header="Headline">
         {/* <h3>Headline</h3> */}
-        <p>Aim for 60-80 characters long, maximum 100. The headline should accurately reflect what the article is about. It should not include excessive punctuation or ALL CAPS</p>
+        <span>
+        <p>Aim for 60-80 characters long, maximum 100.</p>
+        <p>Top tips:</p>
+        <ul>
+          <li>The headline should accurately reflect what the article is about</li>
+          <li>It must not include excessive punctuation or ALL CAPS</li>
+        </ul>
+        </span>
         <img src="https://i.imgur.com/OZu2qws.png" />
         </AccordionTab>
         <AccordionTab header="Lead text">
-        <p>This provides extra information, includes keywords, and should make readers want to read the full article. It should be different from the headline and contain a geographical reference if applicable</p>
+        <span>
+        <p>This provides extra information and make readers want to read the full article.</p>
+        <p>Top tips:</p>
+        <ul>
+          <li>To avoid duplication, it must be different from the headline</li>
+          <li>Include a geographical reference where possible</li>
+          <li>Keywords relating to the article should be included - but must fit naturally and read well</li>
+        </ul>
+        </span>
         <img src="https://i.imgur.com/OZu2qws.png" />
         </AccordionTab>
         <AccordionTab header="Byline">
+        <span>
         <p>Add the name of your company in the byline section</p>
+        <p>Top tips:</p>
+        <ul>
+          <li>The byline will appear at the very top of the article and is a legal requirement mandated by the Advertising Standards Agency</li>
+          <li>It provides an SEO boost, so should match the online identity of your business</li>
+          <li>This does not necessarily have to be the exact way the company is referred to in the body copy - eg. the Reach style guide removes elements such as &apos;Ltd&apos; or &apos;Plc&apos; in article text, but those can be included here</li>
+        </ul>
+        </span>
         <img src="https://i.imgur.com/OZu2qws.png" />
         </AccordionTab>
         <AccordionTab header="Body copy">
@@ -701,17 +724,28 @@ export default function Home() {
         <img src="https://i.imgur.com/OZu2qws.png" />
         </AccordionTab>
         <AccordionTab header="Images">
+        <span>
+          <p>A maximum of 3 images can be included in a Supplied article. To include additional images, a Bespoke package must be purchased.</p>
+          <p>Top tips:</p>
         <ul>
-          <li>A maximum of 3 images can be included in the article</li>
           <li>Images must be clean, text-free and in a 3:2 landscape ratio</li>
           <li>Include an image credit where appropriate and a caption of up to eight words for every image</li>
           <li>Written permission must be held from all subjects featured in images</li>
           <li>By providing the images you are confirming that you hold the copyright and permission to use them for commercial purposes</li>
         </ul>
+        </span>
         <img src="https://i.imgur.com/OZu2qws.png" />
         </AccordionTab>
         <AccordionTab header="Call to Action">
-        <p>This is the final paragraph at the foot of the article. Typically bolded, it will contain the contact details and is the only place in which links can be included in Supplied articles. It should be a clear signpost to readers on how to get in touch, i.e. via your website or social media channels</p>
+        <span>
+        <p>This is the final paragraph at the foot of the article.</p>
+        <p>Top tips:</p>
+        <ul>
+          <li>This text will be bolded and stand out to reader</li>
+          <li>The Call to Action is the only place within a Supplied article where links can be included</li>
+          <li>It should be a clear signpost to readers on how to get in touch, i.e. via your website or social media channels</li>
+        </ul>
+        </span>
         <img src="https://i.imgur.com/OZu2qws.png" />
         </AccordionTab>
         </Accordion>
@@ -730,6 +764,7 @@ export default function Home() {
         <p>Please provide as much information as possible. The writer may get in touch should any points of clarification be required, but this may delay the publication of the article.</p>
         <p>If you have any images that you would like us to include, please provide them - though they must follow the guidelines in the Images section of the Supplied specification above.</p>
         <p>Once completed, click the Save button and a PDF will be downloaded to your device. Please email this, along with any images to be included, directly to your Reach account manager who will process it along with the Content Marketing booking.</p>
+        <p><a href="https://reachcreativestudio.com/cmspecs/form">Click here</a> to access the Bespoke Content Marketing Request Form.</p>
       </div>
     </div>
     </main>
