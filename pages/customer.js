@@ -688,13 +688,16 @@ export default function Home() {
         <img src="https://i.imgur.com/OZu2qws.png" />
         </AccordionTab>
         <AccordionTab header="Body copy">
+        <span>
         <p>Maximum of 500 words in total. Aim for every paragraph to be one or two sentences long - this makes the content more readable on mobile devices and helps with Google indexing. The intro line is recommended to be brief - a maximum of 100 words. Break down the text with suitable subheadings where necessary. These can include keywords</p>
-        <br /> Top tips:
+        <br />
+        <p>Top tips:</p>
         <ul>
           <li>Identify the target audience and ensure you are effectively communicating with them</li>
           <li>Use clear and concise language and make sure your spelling and punctuation are accurate</li>
           <li>Ensure your writing flows smoothly and communicates your message effectively</li>
         </ul>
+        </span>
         <img src="https://i.imgur.com/OZu2qws.png" />
         </AccordionTab>
         <AccordionTab header="Images">
