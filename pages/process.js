@@ -779,7 +779,7 @@ children: [{
     <>
     <main className="min-h-screen pt-5">
     <div className="ml-10">
-    <Accordion multiple activeIndex={[0]} className="mb-7">
+    <Accordion multiple activeIndex={[2]} className="mb-7">
       <AccordionTab header="Content Marketing Specifications" id="specifications">
             <DataTable value={data} className="pt-5 pb-5" showGridlines style={{minWidth: '50rem'}}>
                 <Column field="package" frozen header=" " body={packageTemplate}></Column>
@@ -790,8 +790,7 @@ children: [{
             </DataTable>
             <p><i>*The inclusion of all URLs is at the discretion of the writer, regardless of the package. Research bookings are not limited to 1 link - both a website and social page can be linked to, for example - but they must sit within the final CTA paragraph at the foot of the article and be reasonable (multiple links to a domain etc cannot be included).
             Bespoke packages receive <strong><u>UP TO</u></strong> 6 URLs within the copy, but again this is at the discretion of the writer and all links must be relevant both in terms of content and positioning.<br />
-            **Minimum Start Date is the Studio SLA plus the Proofing Window and is the earliest Start Date that can be added to an ARF at the point of processing to Studio. This can be moved forward if the article is published earlier than this date, but no booking should be processed with an earlier Start Date</i></p>         
-      </AccordionTab>
+            **Minimum Start Date is the Studio SLA plus the Proofing Window and is the earliest Start Date that can be added to an ARF at the point of processing to Studio. This can be moved forward if the article is published earlier than this date, but no booking should be processed with an earlier Start Date</i></p>               </AccordionTab>
       <AccordionTab className="pt-5" header="Legal Matrix" id="matrix">
         <div className="pt-5 pb-5"><a><br />The below is a non-exhaustive list of the industries that can only be progressed as Restricted Sector packages, if at all. The table is intended for the salesperson to determine the necessary package at the point of pitching and confirm the details that must be provided in order to progress the booking. Any booking received that does not contain the necessary information in the Details Required section will be rejected. It is the responsibility of the salesperson to verify that the details provided are valid</a></div>
         <TreeTable value={matrixData} tableStyle={{ minWidth: '50rem'}}>

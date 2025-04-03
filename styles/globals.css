@@ -498,7 +498,7 @@ u {
   margin-top: 120px
 }
 
-u,ul {
+u,ul,ol {
   color: var(--reach-blue)
 }
 
@@ -506,6 +506,12 @@ ul {
   margin-top: 20px;
   margin-bottom: 20px;
   list-style-type: square
+}
+
+ol {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  list-style-type: decimal
 }
 
 li {
